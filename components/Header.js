@@ -1,37 +1,36 @@
-import React from 'react'
-
+import React from "react";
 
 const logotext = "< Kanishkasahu />";
 
 function Header() {
-    return (
-        <div className="bg-gray-100">
-            <div className="flex py-6 px-48 justify-between">
-                <div className="flex-1 text-2xl">
-                    {logotext}
-                </div>
-                <div className="flex-1 flex">
-                    <div>
-                        About Me
-                    </div>
-                    <div>
-                        About Me
-                    </div>
-                    <div>
-                        About Me
-                    </div>
-                    <div>
-                        About Me
-                    </div>
-                </div>
-                <div className="flex-1">
-                    <div>
-                        social media
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className="bg-gray-100 px-12">
+      <div className="flex py-8 px-48 justify-between justify-items-center	">
+        <div className="flex-1 text-3xl p-2 -text ">
+          {/* <span className="font-bold">{"< "}</span> */}
+          <span className="font-bold animate-text">{"<Kanishka/>"}</span>
+          {/* <span className="font-bold">{"/> "}</span> */}
         </div>
-    )
+        <div className="flex-1 flex justify-between justify-items-center	">
+          <div className="text-xl  py-3 px-3 hover:bg-black hover:text-white rounded-lg">
+            About Me
+          </div>
+          <div className="text-xl  py-3 px-3 hover:bg-black hover:text-white rounded-lg">
+            My Projects
+          </div>
+          <div className="text-xl  py-3 px-3 hover:bg-black hover:text-white rounded-lg">
+            Tech Stack
+          </div>
+          <div className="text-xl  py-3 px-3 hover:bg-black hover:text-white rounded-lg">
+            Highlights
+          </div>
+          <div className="text-xl  py-3 px-3 hover:bg-black hover:text-white rounded-lg">
+            Contact
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Header
+export default Header;

@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+
+/* .gradient-text {
+color : rgb(34,193,195);
+background: 
+} */
+.gradient-text {
+background: #57CFCB;
+background: -webkit-repeating-linear-gradient(to right, #57CFCB 0%, #CF7CC4 100%);
+background: -moz-repeating-linear-gradient(to right, #57CFCB 0%, #CF7CC4 100%);
+background: repeating-linear-gradient(to right, #57CFCB 0%, #CF7CC4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.g-bg{
+  background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,0.6671043417366946) 0%, rgba(253,45,224,0.4990371148459384) 100%);
+}
+/* 
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+
+
+
+
+
+
+/* Animation */
+.animate-text {
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+               border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 28px;
+  color: 
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
+}
+
+
+
+
+
+.g-bg-pink-blue{
+  background: rgb(34,193,195);
+background: linear-gradient(56deg, rgba(34,193,195,0.6671043417366946) 0%, rgba(253,45,224,0.4990371148459384) 100%);
+
+}
+
+
