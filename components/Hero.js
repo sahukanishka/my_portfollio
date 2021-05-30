@@ -1,12 +1,19 @@
 import React from "react";
-
+import Image from "next/image";
 function Hero() {
   return (
     <div className="bg-gray-100 ">
       <div className="md:px-48 md:py-60">
         <div className="flex md:px-64">
           <div className="rounded">
-            <img src="dp.png" alt="logo" />
+            <Image
+              className="rounded-lg"
+              src="/kanix.jpg"
+              width={400}
+              height={400}
+              b
+              alt="logo"
+            />
           </div>
           <div className=" flex flex-col align-center w-3/5 md:pl-12">
             <div className="md:text-9xl  md:py-6 font-normal">Hi there! ;)</div>
@@ -16,13 +23,13 @@ function Hero() {
               more about my journey below.
             </div>
             <div>
-              <button className="bg-black text-white rounded-full hover:bg-transparent hover:border-2 hover:text-black hover:shadow-sm p-5 text-xl">
+              <button className="bg-black text-white rounded-full hover:bg-gray-200 hover:border-2  hover:text-black hover:shadow-sm p-5 text-xl">
                 Want to know more..
               </button>
             </div>
           </div>
         </div>
-        <div className="text-center md:py-36 ">swapie up</div>
+        <div className="text-center md:py-36 animate ">swapie up</div>
       </div>
     </div>
   );
