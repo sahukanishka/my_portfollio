@@ -3,10 +3,10 @@ import React from "react";
 function Aboutskills() {
   return (
     <div>
-      <div className="px-48 pb-80">
-        <div className="flex px-12">
+      <div className="md:px-48 md:pb-80 pb-8">
+        <div className="flex md:flex-row flex-col px-12">
           <div className="flex-1">
-            <div className="font-normal text-7xl py-12">My Career So Far</div>
+            <div className="font-normal text-7xl font-light py-12">My Career So Far</div>
             <div className="font-light text-2xl leading-relaxed">
               Always up for a challenge, I have worked for lean start-ups and
               was a member of the first New Zealand start-up to attend Y
@@ -16,8 +16,8 @@ function Aboutskills() {
               Currently, I lead UI/UX design at SaaS start-up VideoMyJob.
             </div>
           </div>
-          <div className="flex-1 py-12">
-            <div className="pl-16">
+          <div className="flex-1 md:py-12 py-12">
+            <div className="md:pl-16">
               <div className="justify-around">
                 <div>
                   <div className="relative pt-1">

@@ -19,20 +19,20 @@ function Header() {
           <Logo />
         </div>
 
-        <div className="flex-1 hidden flex md:flex-row flex-col justify-between justify-items-center	">
-          <div className="text-xl  py-3 px-3 hover:bg-black hover:text-white rounded-lg">
+        <div className="flex-1 hidden md:block space-x-4 ">
+          <div className="text-xl inline-block  py-2 px-3 hover:bg-black hover:text-white rounded-lg hover:shadow-lg">
             About Me
           </div>
-          <div className="text-xl  py-3 px-3 hover:bg-black hover:text-white rounded-lg">
+          <div className="text-xl inline-block  py-2 px-3 hover:bg-black hover:text-white rounded-lg hover:shadow-lg">
             My Projects
           </div>
-          <div className="text-xl  py-3 px-3 hover:bg-black hover:text-white rounded-lg">
+          <div className="text-xl inline-block  py-2 px-3 hover:bg-black hover:text-white rounded-lg hover:shadow-lg">
             Tech Stack
           </div>
-          <div className="text-xl  py-3 px-3 hover:bg-black hover:text-white rounded-lg">
+          <div className="text-xl inline-block  py-2 px-3 hover:bg-black hover:text-white rounded-lg hover:shadow-lg">
             Highlights
           </div>
-          <div className="text-xl  py-3 px-3 hover:bg-black hover:text-white rounded-lg">
+          <div className="text-xl inline-block  py-2 px-3 hover:bg-black hover:text-white rounded-lg hover:shadow-lg">
             Contact
           </div>
         </div>
@@ -41,9 +41,10 @@ function Header() {
             <Menuicon width={30} height={30} color={"black"} />
           </button>
         </div>
-      </div>
-      {ismenuOpen ? <MobileMenu /> : ""}
-    </div>
+      </div >
+      { ismenuOpen ? <MobileMenu /> : ""
+      }
+    </div >
   );
 }
 

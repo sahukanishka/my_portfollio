@@ -32,24 +32,27 @@ function footer() {
         </ul>
 
         <ul className="w-50 flex justify-center py-8">
-          <a href="#" className="px-8 py-3 ">
+          <a href="#" className="md:px-8 px-4 py-3 ">
             <Facebook width={30} height={30} color={"gray"} />
           </a>
-          <a href="#" className="px-8 py-3 ">
+          <a href="#" className="md:px-8 px-4 py-3 ">
             <Instagram width={30} height={30} color={"gray"} />
           </a>
-          <a href="#" className="px-8 py-3 ">
+          <a href="#" className="md:px-8 px-4 py-3 ">
             <Github width={30} height={30} color={"gray"} />
           </a>
-          <a href="#" className="px-8 py-3 ">
+          <a href="#" className="md:px-8 px-4 py-3 ">
             <LinkedIn width={30} height={30} color={"gray"} />
           </a>
-          <a href="#" className="px-8 py-3 ">
+          <a href="#" className="md:px-8 px-4 py-3 ">
             <Mail width={30} height={30} color={"gray"} />
           </a>
         </ul>
-        <div className="text-gray-500 pt-3 text-center">
+        <div className="text-gray-500 pt-2 text-center">
           Made with ❤️ by @kanixsahu
+        </div>
+        <div className="text-gray-500 pt-2 text-center">
+          Hosted with <span className="text-black font-bold">Vercel</span>
         </div>
       </div>
     </div>
