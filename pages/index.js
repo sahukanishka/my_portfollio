@@ -6,6 +6,7 @@ import Hero from "../components/Hero";
 import AboutSkills from "../components/Aboutskills";
 import MyWork from "../components/Mywork";
 import Footer from "../components/footer";
+import ProjectBar from '../components/ProjetBar'
 export default function Home() {
   return (
     <div className="bg-gray-100 ">
@@ -13,7 +14,9 @@ export default function Home() {
       <Hero />
       <AboutSkills />
       <MyWork />
+      <ProjectBar />
       <Footer />
+
     </div>
   );
 }

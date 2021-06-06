@@ -15,24 +15,24 @@ function Header() {
   return (
     <div className="bg-gray-100 md:px-12">
       <div className="flex md:py-8 py-4 px-2 md:px-48 justify-between justify-items-center	">
-        <div className="flex-1 text-3xl p-2 ">
+        <div className="flex-1 md:text-3xl p-2 ">
           <Logo />
         </div>
 
         <div className="flex-1 hidden md:block space-x-4 ">
-          <div className="text-xl inline-block  py-2 px-3 hover:bg-black hover:text-white rounded-lg hover:shadow-lg">
+          <div className="mb-2 md:mb-0 bg-transprant  px-5 py-2  tracking-wider text-black rounded-full hover:bg-black hover:text-white inline-flex items-center space-x-2 ">
             About Me
           </div>
-          <div className="text-xl inline-block  py-2 px-3 hover:bg-black hover:text-white rounded-lg hover:shadow-lg">
+          <div className="mb-2 md:mb-0 bg-transprant  px-5 py-2  tracking-wider text-black rounded-full hover:bg-black hover:text-white inline-flex items-center space-x-2 ">
             My Projects
           </div>
-          <div className="text-xl inline-block  py-2 px-3 hover:bg-black hover:text-white rounded-lg hover:shadow-lg">
+          <div className="mb-2 md:mb-0 bg-transprant  px-5 py-2  tracking-wider text-black rounded-full hover:bg-black hover:text-white inline-flex items-center space-x-2 ">
             Tech Stack
           </div>
-          <div className="text-xl inline-block  py-2 px-3 hover:bg-black hover:text-white rounded-lg hover:shadow-lg">
+          <div className="mb-2 md:mb-0 bg-transprant  px-5 py-2  tracking-wider text-black rounded-full hover:bg-black hover:text-white inline-flex items-center space-x-2 ">
             Highlights
           </div>
-          <div className="text-xl inline-block  py-2 px-3 hover:bg-black hover:text-white rounded-lg hover:shadow-lg">
+          <div className="mb-2 md:mb-0 bg-transprant  px-5 py-2  tracking-wider text-black rounded-full hover:bg-black hover:text-white inline-flex items-center space-x-2 ">
             Contact
           </div>
         </div>

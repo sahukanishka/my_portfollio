@@ -14,7 +14,7 @@ function Mywork() {
           </div>
         </div>
         <div className="flex px-12 md:py-12 py-8">
-          <button className="bg-black text-white rounded-full hover:bg-gray-200 hover:border-2  hover:text-black hover:shadow-sm px-6 py-3 text-2xl">
+          <button className="mb-2 md:mb-0 bg-black px-5 py-2 shadow-sm tracking-wider border text-white rounded-full hover:bg-gray-100 hover:text-black inline-flex items-center space-x-2 ">
             Projects
           </button>
         </div>

@@ -16,7 +16,7 @@ function Hero() {
             />
           </div>
           <div className=" flex flex-col align-center md:w-3/5 md:pl-12">
-            <div className="md:text-8xl text-6xl py-6  md:py-6 font-normal">
+            <div className="md:text-8xl text-5xl py-6  md:py-6 font-normal">
               Hi there! ;)
             </div>
             <div className="md:text-2xl  text-xl font-light leading-relaxed	 md:py-6">
@@ -25,7 +25,7 @@ function Hero() {
               more about my journey below.
             </div>
             <div className="py-6">
-              <button className="bg-black text-white rounded-full hover:bg-gray-200 hover:border-2  hover:text-black hover:shadow-sm p-4 text-xl">
+              <button className="mb-2 md:mb-0 bg-black px-5 py-2 shadow-sm tracking-wider border text-white rounded-full hover:bg-gray-100 hover:text-black inline-flex items-center space-x-2 ">
                 Want to know more..
               </button>
             </div>
