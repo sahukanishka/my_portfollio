@@ -7,16 +7,17 @@ import AboutSkills from "../components/Aboutskills";
 import MyWork from "../components/Mywork";
 import Footer from "../components/footer";
 import ProjectBar from '../components/ProjetBar'
+import Conatct from '../components/Contact'
 export default function Home() {
   return (
-    <div className="bg-gray-100 ">
+    <div className=" ">
       <Header />
       <Hero />
       <AboutSkills />
       <MyWork />
       <ProjectBar />
+      {/* <Conatct /> */}
       <Footer />
-
     </div>
   );
 }

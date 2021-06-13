@@ -2,8 +2,8 @@ import React from "react";
 
 function Aboutskills() {
   return (
-    <div>
-      <div className="md:px-48 md:pb-80 pb-8">
+    <div className="bg-gray-150">
+      <div className="md:px-48 md:py-80 pb-8">
         <div className="flex md:flex-row flex-col px-12">
           <div className="flex-1">
             <div className="font-normal text-7xl font-light py-12">My Career So Far</div>

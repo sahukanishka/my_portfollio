@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+   font-family: 'Ubuntu', sans-serif;
+}
+
+div { 
+  font-family: 'Ubuntu', sans-serif;
+}
 
 
 /* .gradient-text {
@@ -19,6 +28,12 @@ background: repeating-linear-gradient(to right, #57CFCB 0%, #CF7CC4 100%);
 .g-bg{
   background: rgb(34,193,195);
 background: linear-gradient(0deg, rgba(34,193,195,0.6671043417366946) 0%, rgba(253,45,224,0.4990371148459384) 100%);
+}
+
+.about-skill-bg {
+  height: 1000px; /* Used to enable scrolling */
+  background: rgb(86,143,144);
+background: linear-gradient(56deg, rgba(86,143,144,0.7231267507002801) 0%, rgba(4,4,4,0.8547794117647058) 100%);
 }
 /* 
   background: -webkit-linear-gradient(#eee, #333);

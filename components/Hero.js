@@ -3,7 +3,7 @@ import Image from "next/image";
 function Hero() {
   return (
     <div className="bg-gray-100 ">
-      <div className="md:px-48 md:py-52 px-4 py-8">
+      <div className="md:px-48 md:py-48 px-4 py-8">
         <div className="flex md:px-64 md:flex-row flex-col items-center px-16">
           <div className="rounded">
             <Image
@@ -31,8 +31,9 @@ function Hero() {
             </div>
           </div>
         </div>
-        <div className="text-center md:py-36 pt-16 animate ">swapie up</div>
+        <div className="text-center py-6 pt-16 animate ">swapie up</div>
       </div>
+
     </div>
   );
 }

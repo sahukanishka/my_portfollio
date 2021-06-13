@@ -5,9 +5,9 @@ function projectcard() {
     <div>
       <div>
         <div className="content">
-          <div className="flex w-full m-5">
+          <div className="flex  m-5 p-8 md:p-0">
             <div className="flex flex-col">
-              <div className="bg-white shadow-md  rounded-3xl p-4">
+              <div className="bg-white shadow-lg rounded-3xl p-4 ">
                 <div className="flex-none lg:flex">
                   <div className=" h-full w-full lg:h-48 lg:w-48   lg:mb-0 mb-3">
                     <img src="https://images.unsplash.com/photo-1622180203374-9524a54b734d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80"
@@ -17,7 +17,7 @@ function projectcard() {
                     <div className="flex flex-wrap ">
                       <div className="w-full flex-none text-xs text-blue-700 font-medium ">
                         Project
-                            </div>
+                      </div>
                       <h2 className="flex-auto text-lg font-medium">Massive Dynamic</h2>
                     </div>
                     <p className="mt-3"></p>
