@@ -1,21 +1,98 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+div {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/* .gradient-text {
+color : rgb(34,193,195);
+background: 
+} */
+
+.gradient-text {
+    background: #57CFCB;
+    background: -webkit-repeating-linear-gradient(to right, #57CFCB 0%, #CF7CC4 100%);
+    background: -moz-repeating-linear-gradient(to right, #57CFCB 0%, #CF7CC4 100%);
+    background: repeating-linear-gradient(to right, #57CFCB 0%, #CF7CC4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.g-bg {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 0.6671043417366946) 0%, rgba(253, 45, 224, 0.4990371148459384) 100%);
+}
+
+.about-skill-bg {
+    height: 1000px;
+    /* Used to enable scrolling */
+    background: rgb(86, 143, 144);
+    background: linear-gradient(56deg, rgba(86, 143, 144, 0.7231267507002801) 0%, rgba(4, 4, 4, 0.8547794117647058) 100%);
+}
+
+
+/* 
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+
+
+/* Animation */
+
+.animate-text {
+    animation: animated-text 4s steps(29, end) 1s 1 normal both, animated-cursor 600ms steps(29, end) infinite;
+    border-right: solid 3px rgba(0, 255, 0, .75);
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 28px;
+    color:
+}
+
+
+/* text animation */
+
+.g-bg-pink-blue {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(56deg, rgba(34, 193, 195, 0.6671043417366946) 0%, rgba(253, 45, 224, 0.4990371148459384) 100%);
+}
+
+.svg-background {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23fc3dff'/%3E%3Cstop offset='1' stop-color='%2370f0ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' strokeWidth='5.9399999999999995'%3E%3Cpath d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle strokeWidth='1.9800000000000002' transform='' cx='500' cy='100' r='40'/%3E%3Cpath transform='' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' strokeWidth='1.8'%3E%3Cpath transform='' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect strokeWidth='3.9600000000000004' transform='' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.typing-text {
+    animation: animated-text 4s steps(29, end) 1s 1 normal both, animated-cursor 600ms steps(29, end) infinite;
+}
+
+@keyframes animated-text {
+    from {
+        width: 0;
+    }
+    to {
+        width: 472px;
+    }
+}
+
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+    from {
+        border-right-color: rgba(0, 255, 0, .75);
+    }
+    to {
+        border-right-color: transparent;
+    }
 }
