@@ -6,7 +6,9 @@ function Aboutskills() {
       <div className="md:px-48 md:py-80 pb-8">
         <div className="flex md:flex-row flex-col px-12">
           <div className="flex-1">
-            <div className="font-normal text-7xl font-light py-12">My Career So Far</div>
+            <div className="font-normal text-7xl font-light py-12">
+              My Career So Far
+            </div>
             <div className="font-light text-2xl leading-relaxed">
               Always up for a challenge, I have worked for lean start-ups and
               was a member of the first New Zealand start-up to attend Y

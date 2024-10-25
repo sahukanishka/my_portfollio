@@ -1,10 +1,10 @@
 import React from "react";
-import Facebook from "../icons/facebook";
-import Instagram from "../icons/instagram";
-import Github from "../icons/github";
-import LinkedIn from "../icons/linkedin";
-import Mail from "../icons/mail";
-import Logo from "../icons/Logo";
+import Instagram from "@/icons/instagram";
+import Github from "@/icons/github";
+import LinkedIn from "@/icons/linkedin";
+import Mail from "@/icons/mail";
+import Logo from "@/icons/Logo";
+import Facebook from "@/icons/facebook";
 
 function footer() {
   return (

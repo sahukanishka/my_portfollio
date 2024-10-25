@@ -1,6 +1,7 @@
+"use client";
 import React, { useState } from "react";
-import Logo from "../icons/Logo";
-import Menuicon from "../icons/menuicon";
+import Logo from "@/icons/Logo";
+import Menuicon from "@/icons/menuicon";
 
 const logotext = "< Kanishkasahu />";
 
@@ -41,10 +42,9 @@ function Header() {
             <Menuicon width={30} height={30} color={"black"} />
           </button>
         </div>
-      </div >
-      { ismenuOpen ? <MobileMenu /> : ""
-      }
-    </div >
+      </div>
+      {ismenuOpen ? <MobileMenu /> : ""}
+    </div>
   );
 }
 
