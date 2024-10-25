@@ -11,7 +11,6 @@ function Hero() {
               src="/kanixdp.jpg"
               width={400}
               height={400}
-              b
               alt="logo"
             />
           </div>
@@ -33,7 +32,6 @@ function Hero() {
         </div>
         <div className="text-center py-6 pt-16 animate ">swapie up</div>
       </div>
-
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const linkedin = ({ width, color, height }) => {
+const linkedin = ({ width, color, height }: any) => {
   return (
     <div>
       <svg

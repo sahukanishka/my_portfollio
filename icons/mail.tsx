@@ -1,6 +1,6 @@
 import React from "react";
 
-const mail = ({ width, height, color }) => {
+const mail = ({ width, height, color }: any) => {
   return (
     <div>
       <svg

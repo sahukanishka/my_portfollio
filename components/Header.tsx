@@ -8,7 +8,7 @@ const logotext = "< Kanishkasahu />";
 function Header() {
   const [ismenuOpen, setIsmenuOpen] = useState(false);
 
-  function handleMenuClick(e) {
+  function handleMenuClick(e: any) {
     e.preventDefault();
     setIsmenuOpen(!ismenuOpen);
   }

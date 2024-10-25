@@ -1,6 +1,6 @@
 import React from "react";
 
-const instagram = ({ width, height, color }) => {
+const instagram = ({ width, height, color }: any) => {
   return (
     <div>
       <svg

@@ -1,6 +1,6 @@
 import React from "react";
 
-const facebook = ({ width, height, color }) => {
+const facebook = ({ width, height, color }: any) => {
   return (
     <div>
       <svg

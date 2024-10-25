@@ -1,6 +1,6 @@
 import React from "react";
 
-const progressbar = () => {
+const progressbar = ({ props }: any) => {
   const howmuch = props.length;
   return (
     <div>
