@@ -4,7 +4,7 @@ import Logo from "@/icons/Logo";
 
 import { Github, Linkedin, Twitter } from "lucide-react";
 
-function footer() {
+function Footer() {
   return (
     <div>
       <div className="flex flex-col justify-center items-center px-4 md:px-48 md:py-24 py-24">
@@ -65,4 +65,4 @@ function footer() {
   );
 }
 
-export default footer;
+export default Footer;

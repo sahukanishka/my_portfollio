@@ -15,7 +15,6 @@ export default function Home() {
       <Mywork />
       <ProjectBar />
       <Contact />
-      <Footer />
     </div>
   );
 }
