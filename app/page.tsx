@@ -9,7 +9,7 @@ import ProjectBar from "@/components/ProjetBar";
 export default function Home() {
   return (
     <div className=" ">
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <Aboutskills />
       <Mywork />
