@@ -1,10 +1,8 @@
 import React from "react";
-import Instagram from "@/icons/instagram";
-import Github from "@/icons/github";
-import LinkedIn from "@/icons/linkedin";
-import Mail from "@/icons/mail";
+
 import Logo from "@/icons/Logo";
-import Facebook from "@/icons/facebook";
+
+import { Github, Linkedin, Twitter } from "lucide-react";
 
 function footer() {
   return (
@@ -31,28 +29,36 @@ function footer() {
           </li>
         </ul>
 
-        <ul className="w-50 flex justify-center py-8">
-          <a href="#" className="md:px-8 px-4 py-3 ">
-            <Facebook width={30} height={30} color={"gray"} />
-          </a>
-          <a href="#" className="md:px-8 px-4 py-3 ">
-            <Instagram width={30} height={30} color={"gray"} />
-          </a>
-          <a href="#" className="md:px-8 px-4 py-3 ">
-            <Github width={30} height={30} color={"gray"} />
-          </a>
-          <a href="#" className="md:px-8 px-4 py-3 ">
-            <LinkedIn width={30} height={30} color={"gray"} />
-          </a>
-          <a href="#" className="md:px-8 px-4 py-3 ">
-            <Mail width={30} height={30} color={"gray"} />
-          </a>
-        </ul>
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center space-x-6">
+            <a
+              href="https://github.com"
+              className="text-gray-400 hover:text-gray-500"
+            >
+              <Github className="h-6 w-6" />
+            </a>
+            <a
+              href="https://linkedin.com"
+              className="text-gray-400 hover:text-gray-500"
+            >
+              <Linkedin className="h-6 w-6" />
+            </a>
+            <a
+              href="https://twitter.com"
+              className="text-gray-400 hover:text-gray-500"
+            >
+              <Twitter className="h-6 w-6" />
+            </a>
+          </div>
+        </div>
         <div className="text-gray-500 pt-2 text-center">
           Made with ❤️ by @kanixsahu
         </div>
         <div className="text-gray-500 pt-2 text-center">
           Hosted with <span className="text-black font-bold">Vercel</span>
+        </div>
+        <div className="mt-8 text-center text-gray-400">
+          <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
         </div>
       </div>
     </div>
