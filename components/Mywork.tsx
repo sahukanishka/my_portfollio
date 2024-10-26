@@ -3,10 +3,10 @@ import React from "react";
 function Mywork() {
   return (
     <div className="svg-background">
-      <div className="md:px-48 md:py-96 py-16">
+      <div className="md:px-16 md:py-96 py-16">
         <div className="flex md:flex-col px-12">
           <div className="">
-            <div className="md:text-8xl text-6xl font-bold leading-normal ">
+            <div className="md:text-6xl text-2xl font-bold leading-normal ">
               A developer passionate about creating
               <span className="gradient-text">{" beautiful"}</span> user
               friendly products
