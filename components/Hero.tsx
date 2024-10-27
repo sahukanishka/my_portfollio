@@ -29,10 +29,10 @@ function Hero() {
                     />
                   </div>
                   <div className=" flex flex-col align-center md:pl-12">
-                    <div className="md:text-4xl text-5xl py-6  md:py-6 font-normal">
+                    <div className="md:text-3xl text-5xl lg:py-2 font-normal">
                       Hi there! ;)
                     </div>
-                    <div className="md:text-2xl text-md text-xl font-light leading-relaxed	 md:py-6">
+                    <div className="lg:text-1xl text-md text-xl font-light leading-relaxed	 md:py-6">
                       Fuelled by a passion for designing compelling products, I
                       have a deep desire to excel and continuously improve in my
                       work. Learn more about my journey below.

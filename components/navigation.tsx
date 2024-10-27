@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { MenuIcon, XIcon } from "lucide-react";
+import { ThemeToggle } from "@/components/themeToggle";
 import Logo from "@/icons/Logo";
 
 const routes = [
@@ -43,12 +44,12 @@ export default function Navigation() {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="">
+          <Link href="/" className="text-xl font-semibold">
             <Logo />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {routes.map((route) => (
               <Link
                 key={route.path}
@@ -63,20 +64,20 @@ export default function Navigation() {
                 {route.label}
               </Link>
             ))}
+            <ThemeToggle />
           </div>
 
           {/* Mobile Navigation */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? (
-              <XIcon className="h-6 w-6" />
-            ) : (
-              <MenuIcon className="h-6 w-6" />
-            )}
-          </button>
+          <div className="md:hidden flex items-center space-x-4">
+            <ThemeToggle />
+            <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+              {isOpen ? (
+                <XIcon className="h-6 w-6" />
+              ) : (
+                <MenuIcon className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
