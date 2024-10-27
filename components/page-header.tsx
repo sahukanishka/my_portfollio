@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 interface PageHeaderProps {
   title: string;
@@ -15,12 +15,10 @@ export function PageHeader({ title, description }: PageHeaderProps) {
       transition={{ duration: 0.8 }}
       className="max-w-3xl"
     >
-      <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+      <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
         {title}
       </h1>
-      <p className="text-xl text-muted-foreground">
-        {description}
-      </p>
+      <p className="text-xl text-muted-foreground">{description}</p>
     </motion.div>
   );
 }
