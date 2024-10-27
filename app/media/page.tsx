@@ -101,7 +101,7 @@ interface LogoSliderProps {
   logos: Logo[];
 }
 
-export function LogoSlider({ logos }: LogoSliderProps) {
+function LogoSlider({ logos }: LogoSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -155,7 +155,7 @@ interface MediaCardProps {
   excerpt: string;
 }
 
-export function MediaCard({
+function MediaCard({
   title,
   publication,
   date,
