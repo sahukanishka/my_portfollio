@@ -2,8 +2,39 @@ import React from "react";
 
 import Logo from "@/icons/Logo";
 
-import { Github, Linkedin, Twitter } from "lucide-react";
-
+import { Github, Heart, Linkedin, Twitter } from "lucide-react";
+import { Separator } from "@radix-ui/react-context-menu";
+import Link from "next/link";
+import { Button } from "./ui/button";
+const navigation = {
+  main: [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Timeline", href: "/timeline" },
+    { name: "Media", href: "/media" },
+    { name: "Stack", href: "/stack" },
+    { name: "Projects", href: "/projects" },
+    { name: "Blog", href: "/blogs" },
+    { name: "Contact", href: "/contact" },
+  ],
+  social: [
+    {
+      name: "GitHub",
+      href: "https://github.com",
+      icon: Github,
+    },
+    {
+      name: "LinkedIn",
+      href: "https://linkedin.com",
+      icon: Linkedin,
+    },
+    {
+      name: "Twitter",
+      href: "https://twitter.com",
+      icon: Twitter,
+    },
+  ],
+};
 function Footer() {
   return (
     <div>
@@ -29,36 +60,45 @@ function Footer() {
           </li>
         </ul>
 
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center space-x-6">
-            <a
-              href="https://github.com"
-              className="text-gray-400 hover:text-gray-500"
-            >
-              <Github className="h-6 w-6" />
-            </a>
-            <a
-              href="https://linkedin.com"
-              className="text-gray-400 hover:text-gray-500"
-            >
-              <Linkedin className="h-6 w-6" />
-            </a>
-            <a
-              href="https://twitter.com"
-              className="text-gray-400 hover:text-gray-500"
-            >
-              <Twitter className="h-6 w-6" />
-            </a>
+        <Separator className="mb-8" />
+
+        {/* Bottom Section */}
+        <div className="flex flex-col items-center space-y-6">
+          {/* Social Links */}
+          <div className="flex space-x-4">
+            {navigation.social.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Button
+                  key={item.name}
+                  variant="ghost"
+                  size="icon"
+                  asChild
+                  className="hover:scale-110 transition-transform"
+                >
+                  <Link
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon className="h-5 w-5" />
+                    <span className="sr-only">{item.name}</span>
+                  </Link>
+                </Button>
+              );
+            })}
+          </div>
+
+          {/* Made with Love */}
+          <div className="flex items-center text-sm text-muted-foreground">
+            <span>Made with</span>
+            <Heart className="h-4 w-4 mx-1 text-red-500 fill-red-500" />
+            <span>by @Kanishka</span>
           </div>
         </div>
-        <div className="text-gray-500 pt-2 text-center">
-          Made with ❤️ by @kanixsahu
-        </div>
-        <div className="text-gray-500 pt-2 text-center">
-          Hosted with <span className="text-black font-bold">Vercel</span>
-        </div>
-        <div className="mt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
+
+        <div className="mt-8 text-xs text-center text-gray-400">
+          <p>Fully open source for you</p>
         </div>
       </div>
     </div>
