@@ -5,6 +5,7 @@ import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { navigation } from "./navigation";
 function Hero() {
   return (
     <div>
@@ -48,21 +49,21 @@ function Hero() {
                       </Button>
                     </div>
                     <div className="flex space-x-4">
-                      <Button variant="ghost" size="icon" asChild>
-                        <Link href="https://github.com" target="_blank">
-                          <Github className="h-5 w-5" />
-                        </Link>
-                      </Button>
-                      <Button variant="ghost" size="icon" asChild>
-                        <Link href="https://linkedin.com" target="_blank">
-                          <Linkedin className="h-5 w-5" />
-                        </Link>
-                      </Button>
-                      <Button variant="ghost" size="icon" asChild>
-                        <Link href="https://twitter.com" target="_blank">
-                          <Twitter className="h-5 w-5" />
-                        </Link>
-                      </Button>
+                      {navigation.social.map((item: any, index) => {
+                        const Icon = item.icon;
+                        return (
+                          <Button
+                            key={index}
+                            variant="ghost"
+                            size="icon"
+                            asChild
+                          >
+                            <Link href={item.path} target="_blank">
+                              <Icon className="h-5 w-5" />
+                            </Link>
+                          </Button>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>

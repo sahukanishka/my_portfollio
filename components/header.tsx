@@ -8,18 +8,9 @@ import { cn } from "@/lib/utils";
 import { MenuIcon, XIcon } from "lucide-react";
 import { ThemeToggle } from "@/components/themeToggle";
 import Logo from "@/icons/Logo";
+import { navigation } from "./navigation/index";
 
-const routes = [
-  { path: "/", label: "Home" },
-  { path: "/about", label: "About" },
-  { path: "/timeline", label: "Timeline" },
-  { path: "/media", label: "Media" },
-  { path: "/stack", label: "Stack" },
-  { path: "/projects", label: "Projects" },
-  { path: "/contact", label: "Contact" },
-];
-
-export default function Navigation() {
+export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
@@ -50,7 +41,7 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {routes.map((route) => (
+            {navigation.main.map((route) => (
               <Link
                 key={route.path}
                 href={route.path}
@@ -61,7 +52,7 @@ export default function Navigation() {
                     : "text-muted-foreground"
                 )}
               >
-                {route.label}
+                {route.name}
               </Link>
             ))}
             <ThemeToggle />
@@ -89,7 +80,7 @@ export default function Navigation() {
             exit={{ opacity: 0, y: -10 }}
           >
             <div className="flex flex-col space-y-4 p-6">
-              {routes.map((route) => (
+              {navigation.main.map((route) => (
                 <Link
                   key={route.path}
                   href={route.path}
@@ -101,7 +92,7 @@ export default function Navigation() {
                   )}
                   onClick={() => setIsOpen(false)}
                 >
-                  {route.label}
+                  {route.name}
                 </Link>
               ))}
             </div>

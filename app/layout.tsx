@@ -2,9 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import Navigation from "@/components/navigation";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -72,7 +72,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navigation />
+          <Header />
           <main className="min-h-screen bg-background">{children}</main>
           <Toaster />
           <Footer />

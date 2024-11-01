@@ -6,35 +6,8 @@ import { Github, Heart, Linkedin, Twitter } from "lucide-react";
 import { Separator } from "@radix-ui/react-context-menu";
 import Link from "next/link";
 import { Button } from "./ui/button";
-const navigation = {
-  main: [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Timeline", href: "/timeline" },
-    { name: "Media", href: "/media" },
-    { name: "Stack", href: "/stack" },
-    { name: "Projects", href: "/projects" },
-    { name: "Blog", href: "/blogs" },
-    { name: "Contact", href: "/contact" },
-  ],
-  social: [
-    {
-      name: "GitHub",
-      href: "https://github.com",
-      icon: Github,
-    },
-    {
-      name: "LinkedIn",
-      href: "https://linkedin.com",
-      icon: Linkedin,
-    },
-    {
-      name: "Twitter",
-      href: "https://twitter.com",
-      icon: Twitter,
-    },
-  ],
-};
+import { navigation } from "./navigation/index";
+
 function Footer() {
   return (
     <div>
@@ -43,21 +16,14 @@ function Footer() {
           <Logo />
         </div>
         <ul className="md:w-50  flex md:flex-row flex-col md:justify-center  items-center   py-8">
-          <li className="px-8 md:py-0 py-4 text-gray-500 text-xl hover:text-black">
-            About me
-          </li>
-          <li className="px-8 md:py-0 py-4 text-gray-500 text-xl hover:text-black">
-            Projects
-          </li>{" "}
-          <li className="px-8 md:py-0 py-4 text-gray-500 text-xl hover:text-black">
-            Skills
-          </li>{" "}
-          <li className="px-8 md:py-0 py-4 text-gray-500 text-xl hover:text-black">
-            Highlights
-          </li>{" "}
-          <li className="px-8 md:py-0 py-4 text-gray-500 text-xl hover:text-black">
-            Contact{" "}
-          </li>
+          {navigation.main.map((el, index) => (
+            <li
+              key={index}
+              className="px-8 md:py-0 py-4 text-gray-500  hover:text-white"
+            >
+              <Link href={el.path}>{el.name}</Link>
+            </li>
+          ))}
         </ul>
 
         <Separator className="mb-8" />
@@ -77,7 +43,7 @@ function Footer() {
                   className="hover:scale-110 transition-transform"
                 >
                   <Link
-                    href={item.href}
+                    href={item.path}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -96,10 +62,9 @@ function Footer() {
             <span>by @Kanishka</span>
           </div>
         </div>
-
-        <div className="mt-8 text-xs text-center text-gray-400">
-          <p>Fully open source for you</p>
-        </div>
+      </div>
+      <div className="my-3 text-xs text-center text-gray-400">
+        <p>Fully open source for you</p>
       </div>
     </div>
   );
