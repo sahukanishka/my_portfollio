@@ -6,27 +6,6 @@ import { ContactForm } from "@/components/contact-form";
 import { Mail, MessageSquare, Phone } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
-const contactInfo = [
-  {
-    icon: <Mail className="h-6 w-6" />,
-    title: "Email",
-    details: "hello@example.com",
-    link: "mailto:hello@example.com",
-  },
-  {
-    icon: <Phone className="h-6 w-6" />,
-    title: "Phone",
-    details: "+1 (555) 123-4567",
-    link: "tel:+15551234567",
-  },
-  {
-    icon: <MessageSquare className="h-6 w-6" />,
-    title: "Social",
-    details: "@johndoe",
-    link: "https://twitter.com/johndoe",
-  },
-];
-
 export default function Contact() {
   return (
     <div className="min-h-screen pt-24   pb-16">

@@ -1,5 +1,5 @@
 "use client";
-
+import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { PageHeader } from "@/components/page-header";
 import {
@@ -15,7 +15,6 @@ import {
 
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { ReactNode } from "react";
 
 const techStack = {
   languages: {
@@ -105,7 +104,7 @@ const techStack = {
   },
 };
 
-export default function Stack() {
+function Stack() {
   return (
     <div className="min-h-screen pt-24 pb-16">
       <div className="container mx-auto px-6">
@@ -139,6 +138,8 @@ export default function Stack() {
     </div>
   );
 }
+
+export default Stack;
 
 interface StackItem {
   name: string;
