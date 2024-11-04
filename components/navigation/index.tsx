@@ -1,4 +1,10 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import {
+  Github,
+  Instagram,
+  InstagramIcon,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
 
 export const navigation = {
   main: [
@@ -26,6 +32,11 @@ export const navigation = {
       name: "Twitter",
       path: "https://twitter.com",
       icon: Twitter,
+    },
+    {
+      name: "Instagram",
+      path: "https://instagram.com",
+      icon: InstagramIcon,
     },
   ],
 };
