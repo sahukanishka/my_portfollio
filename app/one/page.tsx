@@ -1,4 +1,6 @@
 "use client";
+import { BlogCard } from "@/components/blog-card";
+import { ContactForm } from "@/components/contact-form";
 import { FeatureCard } from "@/components/feature-card";
 import ProjectCard from "@/components/projectcard";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -40,7 +42,7 @@ function Page() {
       <BlogSection />
 
       {/* Contact Section */}
-      {/* <ContactSection /> */}
+      <ContactSection />
     </div>
   );
 }
@@ -313,6 +315,35 @@ export function BlogSection() {
           <Button asChild size="lg">
             <Link href="/blogs">View All Posts</Link>
           </Button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ContactSection() {
+  return (
+    <section className="py-24 bg-secondary/30">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl font-bold tracking-tight mb-4">
+            Get in Touch
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Have a question or want to work together? I'd love to hear from you.
+          </p>
+        </motion.div>
+
+        <div className="max-w-2xl mx-auto">
+          <Card className="p-6">
+            <ContactForm />
+          </Card>
         </div>
       </div>
     </section>
