@@ -37,7 +37,7 @@ function Page() {
       <TestimonialsSection />
 
       {/* Blog Section */}
-      {/* <BlogSection /> */}
+      <BlogSection />
 
       {/* Contact Section */}
       {/* <ContactSection /> */}
@@ -241,6 +241,78 @@ function TestimonialsSection() {
               </Card>
             </motion.div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const recentPosts = [
+  {
+    title: "The Future of AI: Trends and Predictions",
+    description:
+      "Exploring upcoming trends in artificial intelligence and their potential impact on various industries.",
+    date: "2024-02-15",
+    link: "https://example.com/blog/ai-trends",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2940&auto=format&fit=crop",
+    author: "John Doe",
+    categories: ["AI", "Technology", "Future Trends"],
+  },
+  {
+    title: "Building Scalable Systems with Modern Architecture",
+    description:
+      "A deep dive into modern system architecture patterns and best practices for scalability.",
+    date: "2024-02-10",
+    link: "https://example.com/blog/scalable-systems",
+    image:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2934&auto=format&fit=crop",
+    author: "John Doe",
+    categories: ["Architecture", "Development", "Best Practices"],
+  },
+  {
+    title: "Innovation in Tech Entrepreneurship",
+    description:
+      "Insights and lessons learned from years of experience in tech entrepreneurship and innovation.",
+    date: "2024-02-05",
+    link: "https://example.com/blog/tech-entrepreneurship",
+    image:
+      "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2940&auto=format&fit=crop",
+    author: "John Doe",
+    categories: ["Entrepreneurship", "Innovation", "Leadership"],
+  },
+];
+
+export function BlogSection() {
+  return (
+    <section className="py-24">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl font-bold tracking-tight mb-4">
+            Latest Insights
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Thoughts and insights on technology, innovation, and
+            entrepreneurship.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {recentPosts.map((post, index) => (
+            <BlogCard key={index} {...post} />
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Button asChild size="lg">
+            <Link href="/blogs">View All Posts</Link>
+          </Button>
         </div>
       </div>
     </section>
