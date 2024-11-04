@@ -1,6 +1,6 @@
 import React from "react";
 
-function projectcard() {
+function ProjectCard() {
   return (
     <div>
       <div>
@@ -111,4 +111,4 @@ function projectcard() {
   );
 }
 
-export default projectcard;
+export default ProjectCard;
