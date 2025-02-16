@@ -20,10 +20,10 @@ export default function Home() {
       />
       {/* <Header /> */}
       <Hero />
-      <Aboutskills />
+      {/* <Aboutskills />
       <Mywork />
-      <ProjectBar />
-      <Contact />
+      <ProjectBar /> */}
+      {/* <Contact /> */}
     </div>
   );
 }

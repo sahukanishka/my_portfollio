@@ -26,13 +26,11 @@ export default function Blogs() {
     fetchPosts();
   }, []);
 
+  console.log("-->", posts);
   return (
     <div className="min-h-screen pt-24 pb-16">
       <div className="container mx-auto px-6">
-        <PageHeader
-          title="Blog"
-          description="Thoughts and insights on AI, technology, and innovation."
-        />
+        <PageHeader title="Blog" description="Sometimes I write" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {loading
