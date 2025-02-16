@@ -1,9 +1,5 @@
-import Aboutskills from "@/components/Aboutskills";
-import Contact from "@/components/Contact";
-import Footer from "@/components/footer";
 import Hero from "@/components/Hero";
-import Mywork from "@/components/Mywork";
-import ProjectBar from "@/components/ProjetBar";
+import { HeroCard, HeroCardData } from "@/components/screen/landing";
 import { generatePersonSchema } from "@/components/structured-data";
 import Script from "next/script";
 
@@ -18,12 +14,20 @@ export default function Home() {
           __html: JSON.stringify(generatePersonSchema()),
         }}
       />
-      {/* <Header /> */}
+
       <Hero />
-      {/* <Aboutskills />
-      <Mywork />
-      <ProjectBar /> */}
-      {/* <Contact /> */}
+
+      <div className="container mx-auto px-6">
+        {HeroCardData.map((data, index) => (
+          <HeroCard
+            title={data.title}
+            description={data.description}
+            image={data.image}
+            link={data.link}
+            reverse={data.reverse}
+          />
+        ))}
+      </div>
     </div>
   );
 }

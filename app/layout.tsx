@@ -9,38 +9,42 @@ import Header from "@/components/header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL("https://kanishka.vercel.app"),
   title: {
-    default: "John Doe | Tech Innovator & AI Expert",
-    template: "%s | John Doe",
+    default: "Kanishka | Tech Entrepreneur",
+    template: "%s | Kanishka",
   },
   description:
-    "Tech entrepreneur and AI specialist with expertise in machine learning, startup development, and innovative solutions.",
+    "AI innovator, tech entrepreneur, and problem solver. Experienced in building scalable platforms, AI-powered solutions, startups, and automation tools.",
   keywords: [
-    "AI Expert",
-    "Tech Innovator",
+    "AI Innovator",
+    "Tech Entrepreneur",
     "Startup Founder",
     "Machine Learning",
     "Software Development",
-    "Technology Leadership",
+    "Automation",
+    "Voice AI",
+    "Chatbots",
+    "SaaS",
+    "Geofencing",
   ],
-  authors: [{ name: "John Doe" }],
-  creator: "John Doe",
+  authors: [{ name: "Kanishka" }],
+  creator: "Kanishka",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourdomain.com",
-    title: "John Doe | Tech Innovator & AI Expert",
+    url: "https://kanishka.vercel.app",
+    title: "Kanishka | AI Innovator, Tech Entrepreneur & Builder",
     description:
-      "Tech entrepreneur and AI specialist with expertise in machine learning, startup development, and innovative solutions.",
-    siteName: "John Doe Portfolio",
+      "AI innovator, tech entrepreneur, and problem solver. Experienced in building scalable platforms, AI-powered solutions, startups, and automation tools.",
+    siteName: "Kanishka Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "John Doe | Tech Innovator & AI Expert",
+    title: "Kanishka | AI Innovator, Tech Entrepreneur & Builder",
     description:
-      "Tech entrepreneur and AI specialist with expertise in machine learning, startup development, and innovative solutions.",
-    creator: "@johndoe",
+      "AI innovator, tech entrepreneur, and problem solver. Experienced in building scalable platforms, AI-powered solutions, startups, and automation tools.",
+    creator: "@kanishkasahu",
   },
   robots: {
     index: true,
@@ -63,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://yourdomain.com" />
+        <link rel="canonical" href="https://kanishka.vercel.app" />
       </head>
       <body className={inter.className}>
         <ThemeProvider

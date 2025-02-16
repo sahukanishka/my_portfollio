@@ -25,7 +25,6 @@ export default function About() {
           className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12"
         >
           <div className="space-y-2">
-            <h2>.</h2>
             <p className="text-lg text-muted-foreground">
               I’m a CSE graduate from Punjabi University and have been bringing
               my ideas to life for the past four years. From building robots and

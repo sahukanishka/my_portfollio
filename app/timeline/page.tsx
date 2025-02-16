@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 
 const timelineEvents = [
   {
-    year: "20214-2025",
+    year: "2024-2025",
     title: "Founder & CTO",
     company: "Sixeye Technologies",
     description:

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { navigation } from "./navigation";
+import { HeroCard, HeroCardData } from "./screen/landing";
 function Hero() {
   return (
     <div>
@@ -49,7 +50,7 @@ function Hero() {
                         <Link href="/contact">Get in Touch</Link>
                       </Button>
                     </div>
-                    <div className="flex space-x-4">
+                    {/* <div className="flex space-x-4">
                       {navigation.social.map((item: any, index) => {
                         const Icon = item.icon;
                         return (
@@ -65,7 +66,7 @@ function Hero() {
                           </Button>
                         );
                       })}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="text-center py-6 pt-16 animate ">swapie up</div>
