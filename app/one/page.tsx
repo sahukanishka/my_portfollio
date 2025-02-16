@@ -285,7 +285,7 @@ const recentPosts = [
   },
 ];
 
-export function BlogSection() {
+function BlogSection() {
   return (
     <section className="py-24">
       <div className="container mx-auto px-6">
