@@ -20,8 +20,8 @@ function Hero() {
           >
             <div className=" ">
               <div className="">
-                <div className="flex md:px-12 md:flex-row flex-col items-center px-16">
-                  <div className="rounded">
+                <div className="flex md:px-12 md:flex-row flex-col items-center">
+                  <div className="rounded pb-4">
                     <Image
                       className="rounded-lg"
                       src="/kanixdp.jpg"
@@ -31,10 +31,10 @@ function Hero() {
                     />
                   </div>
                   <div className=" flex flex-col align-center md:pl-12">
-                    <div className="md:text-3xl text-5xl lg:py-2 font-normal">
+                    <div className="md:text-3xl text-5xl lg:py-2 font-normal pb-4">
                       Hi there! ;)
                     </div>
-                    <div className="lg:text-1xl text-md text-xl font-light leading-relaxed	 md:py-6">
+                    <div className="lg:text-1xl text-md text-xl font-light leading-relaxed mb-4	 md:py-6">
                       Building my dreams, automating cool things, and chasing
                       big ideas. From apps to voice agents, I love creating and
                       solving problems. I have a passion for adventure,
@@ -43,7 +43,7 @@ function Hero() {
                     <div className="flex flex-col sm:flex-row gap-4 mb-12">
                       <Button asChild size="lg">
                         <Link href="/about">
-                          Know more <ArrowRight className="ml-2 h-4 w-4" />
+                          Read my bio <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
                       <Button variant="outline" size="lg" asChild>

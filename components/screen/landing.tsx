@@ -44,18 +44,17 @@ export const HeroCard = ({
 export const HeroCardData = [
   {
     title: "Coding Coding & Coding",
-    description:
-      "Learn how to build a blog from scratch with Next.js and Tailwind CSS",
+    description: "I love creating websites, building apps or writing scripts.",
     image: "/kanishka-working.jpg",
     link: "",
     reverse: true,
   },
-  {
-    title: "Build your own portfolio",
-    description:
-      "Learn how to build a portfolio from scratch with Next.js and Tailwind CSS",
-    image: "/kanix.jpg",
-    link: "",
-    reverse: false,
-  },
+  //   {
+  //     title: "Build your own portfolio",
+  //     description:
+  //       "Learn how to build a portfolio from scratch with Next.js and Tailwind CSS",
+  //     image: "/kanix.jpg",
+  //     link: "",
+  //     reverse: false,
+  //   },
 ];
