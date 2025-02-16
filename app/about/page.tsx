@@ -51,9 +51,9 @@ export default function About() {
             <p className="text-lg text-muted-foreground">
               By day, I build AI-powered solutions, and by night, I’m a tech
               geek, foodie at heart, and traveler by nature. My passion spans
-              across startups, AI, automation, and solving real-world problems,
+              across startups, AI, automation, and solving real world problems,
               and I’m always looking for the next big thing to build.<br></br>{" "}
-              And no matter where I go, my love for dogs follows me—because some
+              And no matter where I go, my love for dogs follows me because some
               things in life are just non-negotiable. 🐶💙
             </p>
             {/* <Button asChild className="mt-4">
