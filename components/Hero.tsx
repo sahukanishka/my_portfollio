@@ -41,8 +41,8 @@ function Hero() {
                     </div>
                     <div className="flex flex-col sm:flex-row gap-4 mb-12">
                       <Button asChild size="lg">
-                        <Link href="/projects">
-                          View Projects <ArrowRight className="ml-2 h-4 w-4" />
+                        <Link href="/about">
+                          Know more <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
                       <Button variant="outline" size="lg" asChild>
