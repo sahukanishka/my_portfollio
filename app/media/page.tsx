@@ -7,86 +7,64 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
+import LightGallery from "lightgallery/react";
 
-const mediaFeatures = [
-  {
-    title: "AI Innovation Reshaping the Future",
-    publication: "Tech Chronicle",
-    date: "2024",
-    imageUrl:
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop",
-    link: "https://example.com/article1",
-    excerpt:
-      "An in-depth look at how AI is transforming industries and creating new opportunities for innovation.",
-  },
-  {
-    title: "Leading the AI Revolution",
-    publication: "Digital Innovator",
-    date: "2023",
-    imageUrl:
-      "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop",
-    link: "https://example.com/article2",
-    excerpt:
-      "Profile feature on breakthrough achievements in artificial intelligence and machine learning.",
-  },
-  {
-    title: "The Future of Smart Cities",
-    publication: "Future Tech Magazine",
-    date: "2023",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494522358652-f30e61a60313?q=80&w=2070&auto=format&fit=crop",
-    link: "https://example.com/article3",
-    excerpt:
-      "Exploring innovative solutions for urban development and smart infrastructure.",
-  },
-];
-
-const mediaLogos = [
-  {
-    name: "TechCrunch",
-    imageUrl:
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2074&auto=format&fit=crop",
-  },
-  {
-    name: "Forbes",
-    imageUrl:
-      "https://images.unsplash.com/photo-1579547621869-0231e1f95b5c?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    name: "Bloomberg",
-    imageUrl:
-      "https://images.unsplash.com/photo-1554774853-719586f82d77?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    name: "Wired",
-    imageUrl:
-      "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop",
-  },
-];
+// import styles
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
+import lgZoom from "lightgallery/plugins/zoom";
 
 export default function Media() {
+  const images = [
+    { src: "/news/n1.jpeg", link: "" },
+    { src: "/news/n2.jpeg", link: "" },
+    { src: "/news/n3.jpeg", link: "" },
+    { src: "/news/n4.jpeg", link: "" },
+    { src: "/news/n5.jpeg", link: "" },
+    { src: "/news/n6.jpeg", link: "" },
+    { src: "/news/n7.jpeg", link: "" },
+    { src: "/news/n8.jpeg", link: "" },
+    { src: "/news/n9.jpeg", link: "" },
+    // { src: "/news/n1.jpg", width: 400, height: 300 },
+    // { src: "/news/n1.jpg", width: 500, height: 700 },
+    // { src: "/news/n1.jpg", width: 600, height: 500 },
+    // { src: "/news/n1.jpg", width: 250, height: 350 },
+  ];
+
+  useEffect(() => {}, []);
+
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className=" pt-24 pb-16">
       <div className="container mx-auto px-6">
         <PageHeader
           title="Media Coverage"
           description="Featured in leading technology publications and news outlets worldwide."
         />
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-12"
+        <LightGallery
+          plugins={[lgZoom]}
+          mode="lg-fade"
+          pager={false}
+          thumbnail={true}
+          galleryId={"nature"}
+          autoplayFirstVideo={false}
+          elementClassNames={"gallery"}
+          mobileSettings={{
+            controls: false,
+            showCloseIcon: false,
+            download: false,
+            rotate: false,
+          }}
         >
-          <LogoSlider logos={mediaLogos} />
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
-          {mediaFeatures.map((feature, index) => (
-            <MediaCard key={index} {...feature} />
+          {images.map((image, index) => (
+            <img
+              className="img-responsive"
+              key={index}
+              src={image.src}
+              alt="media"
+            />
           ))}
-        </div>
+        </LightGallery>
       </div>
     </div>
   );

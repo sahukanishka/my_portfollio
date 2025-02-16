@@ -34,9 +34,10 @@ function Hero() {
                       Hi there! ;)
                     </div>
                     <div className="lg:text-1xl text-md text-xl font-light leading-relaxed	 md:py-6">
-                      Fuelled by a passion for designing compelling products, I
-                      have a deep desire to excel and continuously improve in my
-                      work. Learn more about my journey below.
+                      Building my dreams, automating cool things, and chasing
+                      big ideas. From apps to voice agents, I love creating and
+                      solving problems. I have a passion for adventure,
+                      startups, and dogs.
                     </div>
                     <div className="flex flex-col sm:flex-row gap-4 mb-12">
                       <Button asChild size="lg">
