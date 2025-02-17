@@ -69,7 +69,7 @@ function Hero() {
                     </div> */}
                   </div>
                 </div>
-                <div className="text-center py-6 pt-16 animate ">swapie up</div>
+                <div className="text-center py-6 pt-16 animate ">swipe up</div>
               </div>
             </div>
           </motion.div>

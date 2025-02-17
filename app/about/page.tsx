@@ -26,20 +26,20 @@ export default function About() {
         >
           <div className="space-y-2">
             <p className="text-lg text-muted-foreground">
-              I’m a CSE graduate from Punjabi University and have been bringing
-              my ideas to life for the past four years. From building robots and
-              IoT-powered taxi-top billboards to creating apps and developing AI
-              voice agents, my journey has been a wild mix of innovation and
-              adventure. On the frontend, my life looks awesome, but on the
-              backend, it's a chaotic mess just like any great tech project. But
-              hey, I love the way I live!
+              I’m a CSE graduate from Punjabi University (2021) and have been
+              bringing my ideas to life for the past four years. From building
+              robots and IoT-powered taxi-top billboards to creating apps and
+              developing AI voice agents, my journey has been a wild mix of
+              innovation and adventure. On the frontend, my life looks awesome,
+              but on the backend, it's a chaotic mess just like any great tech
+              project. But hey, I love the way I live!
             </p>
             <p className="text-lg text-muted-foreground">
-              I played a key role in scaling Oyela’s platform from search to
+              I played a key role in scaling Oyela’s platform from scratch to
               over 500k MAU, built multiple products from scratch, and led tech
-              teams to success. I’ve also been recognized as the Youngest Child
-              Scientist and won National Science Fair awards so yeah, I’ve been
-              geeking out since childhood.
+              teams of 10+ members. I’ve also been recognized as the Youngest
+              Child Scientist and won National Science Fair awards so yeah, I’ve
+              been geeking out since childhood.
             </p>
             <p className="text-lg text-muted-foreground">
               Beyond tech, I’m always chasing thrill and adventure. I’ve done
@@ -48,12 +48,12 @@ export default function About() {
               second-highest bungee jump in Nepal at 228 meters.
             </p>
             <p className="text-lg text-muted-foreground">
-              By day, I build AI-powered solutions, and by night, I’m a tech
-              geek, foodie at heart, and traveler by nature. My passion spans
-              across startups, AI, automation, and solving real world problems,
-              and I’m always looking for the next big thing to build.<br></br>{" "}
-              And no matter where I go, my love for dogs follows me because some
-              things in life are just non-negotiable. 🐶💙
+              By day, I ideate, and by night, I’m a tech geek, foodie at heart,
+              and traveller by nature. My passion spans across startups, AI,
+              automation, and solving real world problems, and I’m always
+              looking for the next big thing to build.<br></br> And no matter
+              where I go, my love for dogs follows me because some things in
+              life are just non-negotiable. 🐶💙
             </p>
             {/* <Button asChild className="mt-4">
               <Link href="/timeline">View My Journey</Link>
