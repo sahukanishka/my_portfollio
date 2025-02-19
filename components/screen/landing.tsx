@@ -62,7 +62,7 @@ export const HeroCardData = [
     title: "No Phone, No Talk, Just Deep Meditation",
     description:
       "I completed an 11-day Vipassana meditation course at Dhamma Vipula, Mumbai, living without a smartphone, internet, or speaking (Mauna Vrat). Meditating 8 hours daily, waking up at 3:30 AM, and following a strict routine until 9 PM was a life-changing experience—testing my discipline, patience, and inner strength. 🧘‍♂️",
-    image: "/kanishka-sahu-vipasana.jpg",
+    image: "/kanishka-sahu-vipasana.jpeg",
     link: "",
     reverse: true,
   },
