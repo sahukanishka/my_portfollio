@@ -40,7 +40,7 @@ export default function Header() {
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" passHref aria-label="Go to homepage">
-          <Logo className="h-8 w-auto" />
+          <Logo />
         </Link>
 
         {/* Desktop Navigation */}
