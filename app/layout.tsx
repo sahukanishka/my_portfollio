@@ -8,57 +8,6 @@ import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://kanishka.vercel.app"),
-  title: {
-    default: "Kanishka | Tech Entrepreneur",
-    template: "%s | Kanishka",
-  },
-  description:
-    "AI innovator, tech entrepreneur, and problem solver. Experienced in building scalable platforms, AI-powered solutions, startups, and automation tools.",
-  keywords: [
-    "AI Innovator",
-    "Tech Entrepreneur",
-    "Startup Founder",
-    "Machine Learning",
-    "Software Development",
-    "Automation",
-    "Voice AI",
-    "Chatbots",
-    "SaaS",
-    "Geofencing",
-  ],
-  authors: [{ name: "Kanishka" }],
-  creator: "Kanishka",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://kanishka.vercel.app",
-    title: "Kanishka | AI Innovator, Tech Entrepreneur & Builder",
-    description:
-      "AI innovator, tech entrepreneur, and problem solver. Experienced in building scalable platforms, AI-powered solutions, startups, and automation tools.",
-    siteName: "Kanishka Portfolio",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Kanishka | AI Innovator, Tech Entrepreneur & Builder",
-    description:
-      "AI innovator, tech entrepreneur, and problem solver. Experienced in building scalable platforms, AI-powered solutions, startups, and automation tools.",
-    creator: "@kanishkasahu",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-};
-
 export default function RootLayout({
   children,
 }: {
