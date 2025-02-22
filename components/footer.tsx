@@ -1,8 +1,6 @@
 import React from "react";
-
 import Logo from "@/icons/Logo";
-
-import { Github, Heart, Linkedin, Twitter } from "lucide-react";
+import { Heart } from "lucide-react";
 import { Separator } from "@radix-ui/react-context-menu";
 import Link from "next/link";
 import { Button } from "./ui/button";
@@ -10,27 +8,36 @@ import { navigation } from "./navigation/index";
 
 function Footer() {
   return (
-    <div>
+    <footer className="bg-background text-gray-400">
       <div className="flex flex-col justify-center items-center px-4 md:px-48 md:py-24 py-24">
+        {/* Logo Section with Alt Text */}
         <div className="text-center pb-6">
-          <Logo />
+          <Link href="/" aria-label="Home">
+            <Logo />
+          </Link>
         </div>
-        <ul className="md:w-50  flex md:flex-row flex-col md:justify-center  items-center   py-8">
-          {navigation.main.map((el, index) => (
-            <li
-              key={index}
-              className="px-8 md:py-0 py-4 text-gray-500  hover:text-white"
-            >
-              <Link href={el.path}>{el.name}</Link>
-            </li>
-          ))}
-        </ul>
+
+        {/* Navigation Links */}
+        <nav aria-label="Footer Navigation">
+          <ul className="md:w-50 flex md:flex-row flex-col md:justify-center items-center py-8">
+            {navigation.main.map((el, index) => (
+              <li key={index} className="px-8 md:py-0 py-4">
+                <Link
+                  href={el.path}
+                  className="text-gray-500 hover:text-white transition-colors"
+                  title={`Navigate to ${el.name}`}
+                >
+                  {el.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         <Separator className="mb-8" />
 
-        {/* Bottom Section */}
+        {/* Social Links */}
         <div className="flex flex-col items-center space-y-6">
-          {/* Social Links */}
           <div className="flex space-x-4">
             {navigation.social.map((item) => {
               const Icon = item.icon;
@@ -41,6 +48,8 @@ function Footer() {
                   size="icon"
                   asChild
                   className="hover:scale-110 transition-transform"
+                  aria-label={item.name}
+                  title={`Follow us on ${item.name}`}
                 >
                   <Link
                     href={item.path}
@@ -59,14 +68,25 @@ function Footer() {
           <div className="flex items-center text-sm text-muted-foreground">
             <span>Made with</span>
             <Heart className="h-4 w-4 mx-1 text-red-500 fill-red-500" />
-            <span>by @Kanishka</span>
+            <span>
+              by{" "}
+              <Link
+                href="https://kanishkasahu.com"
+                className="hover:text-white font-semibold"
+              >
+                Kanishka
+              </Link>
+            </span>
           </div>
         </div>
       </div>
+
+      {/* Copyright & Open Source Notice */}
       <div className="my-3 text-xs text-center text-gray-400">
-        <p>Fully open source for you</p>
+        <p>© {new Date().getFullYear()} Kanishka. All rights reserved.</p>
+        <p>Fully open-source for you.</p>
       </div>
-    </div>
+    </footer>
   );
 }
 

@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://kanishka.vercel.app" />
+        <link rel="canonical" href="https://kanishkasahu.com" />
       </head>
       <body className={inter.className}>
         <ThemeProvider
