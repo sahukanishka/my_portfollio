@@ -13,31 +13,42 @@ export const HeroCard = ({
   reverse = true,
 }: IHeroCardProps) => {
   return (
-    <div
+    <section
       className={`flex flex-col ${
         reverse ? "md:flex-row-reverse" : "md:flex-row"
       } items-center gap-8 py-8 my-4`}
     >
-      <div className="w-full md:w-1/2">
+      {/* Image Section */}
+      <figure className="w-full md:w-1/2">
         <img
           src={image}
-          alt={title}
+          alt={`${title} - related visual`}
+          loading="lazy"
+          width="600"
+          height="400"
           className="w-full h-auto rounded-lg shadow-lg"
         />
-      </div>
+        <figcaption className="sr-only">{title} Image</figcaption>
+      </figure>
+
+      {/* Content Section */}
       <div className="w-full md:w-1/2 space-y-4">
-        <h2 className="text-3xl font-bold">{title}</h2>
-        <p className="text-lg text-muted-foreground">{description}</p>
-        {link !== "" && (
+        <h2 className="text-3xl font-bold leading-tight">{title}</h2>
+        <p className="text-lg text-gray-600">{description}</p>
+
+        {link && (
           <a
             href={link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+            aria-label={`Read more about ${title}`}
           >
             Read more
           </a>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -74,12 +85,4 @@ export const HeroCardData = [
     link: "",
     reverse: false,
   },
-  //   {
-  //     title: "Build your own portfolio",
-  //     description:
-  //       "Learn how to build a portfolio from scratch with Next.js and Tailwind CSS",
-  //     image: "/kanix.jpg",
-  //     link: "",
-  //     reverse: false,
-  //   },
 ];
