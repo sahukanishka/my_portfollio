@@ -21,6 +21,7 @@ export const navigation = {
     // { name: "Projects", path: "/projects" },
     { name: "Blog", path: "/blogs" },
     { name: "Contact", path: "/contact" },
+    { name: "Awards", path: "/awards" },
   ],
   social: [
     {
