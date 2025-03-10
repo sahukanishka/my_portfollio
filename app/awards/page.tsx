@@ -10,68 +10,62 @@ import {
 } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { Card } from "@/components/ui/card";
+import Image from "next/image";
 
 const Awards = () => {
   const awards = [
     {
-      title: "Tech Innovator of the Year",
+      title: "Raised $ 2 Million in Seed Funding : 2023",
       organization: {
-        name: "Global Tech Awards Foundation",
-        description:
-          "The world's leading technology awards organization, recognizing excellence in innovation since 1995. Known for their rigorous selection process and prestigious jury panel of industry leaders.",
-        website: "https://example.com",
+        name: "Prime Venture Partners",
+        website: "https://www.instagram.com/karo_startup_/p/CyvltxSSxv5/#",
         logo: <Award className="w-12 h-12" />,
       },
       year: 2024,
-      image:
-        "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&q=80&w=800&h=600",
+      image: "/kanishka-oyela-funding.png",
       description:
-        "Awarded for developing groundbreaking AI-powered analytics solutions that revolutionized data processing efficiency by 300%. The project demonstrated exceptional innovation in machine learning applications, serving over 100,000 users globally and processing 1 billion+ data points daily.",
-      criteria: [
-        "Revolutionary technological advancement",
-        "Global market impact",
-        "Sustainable implementation",
-      ],
+        "At Oyela Technologies, We raised $2 million in seed funding lead by Prime Venture Partner and a group of investors. The funding will be used to expand our team and empower 2 million small businesses in India.",
+      contribution: [],
     },
     {
-      title: "40 Under 40 Business Leaders",
+      title: "Award of Excellence : 2021",
       organization: {
-        name: "Business Excellence Magazine",
-        description:
-          "A premier business publication with over 2 million readers worldwide, known for identifying and showcasing emerging business leaders who are reshaping their industries.",
-        website: "https://example.com",
-        logo: <Building2 className="w-12 h-12" />,
+        name: "Vice Chancellor Punjabi University",
+        website: "http://www.punjabiuniversity.ac.in/",
+        logo: <Award className="w-12 h-12" />,
       },
-      year: 2023,
-      image:
-        "https://images.unsplash.com/photo-1553028826-f4804a6dba3b?auto=format&fit=crop&q=80&w=800&h=600",
+      year: 2024,
+      image: "/kanishka-sahu-award-punjabi-university.png",
       description:
-        "Selected among 5,000+ nominees for demonstrating exceptional leadership and innovation in the technology sector. Led the successful launch of three enterprise software products, achieving $10M+ in revenue within the first year and creating 100+ new jobs.",
-      criteria: [
-        "Business impact and growth",
-        "Innovation in leadership",
-        "Community contribution",
-      ],
+        "Award of Excellence is the highest honor given by the Punjabi University to the students who have shown exceptional performance in academics and research. I was awarded for my contribution to the field of robotics and AI.",
+      contribution: [],
     },
     {
-      title: "Sustainable Tech Pioneer",
+      title: "Youngest Child Scientist Award : 2018",
       organization: {
-        name: "International Sustainability Council",
-        description:
-          "A globally recognized authority on sustainable technology practices, backed by 50+ environmental organizations and tech industry leaders.",
-        website: "https://example.com",
-        logo: <Globe className="w-12 h-12" />,
+        name: "Government of Uttar Pradesh",
+        website:
+          "https://www.inextlive.com/uttar-pradesh/allahabad/pbd-robot-model-199358",
+        logo: <Award className="w-12 h-12" />,
       },
-      year: 2023,
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800&h=600",
+      year: 2024,
+      image: "/cm-yogi-award-kanishka-sahu.jpeg",
       description:
-        "Recognized for developing eco-friendly cloud computing solutions that reduced data center energy consumption by 45%. The initiative has been adopted by major tech companies, leading to an estimated reduction of 100,000 metric tons of CO2 emissions annually.",
-      criteria: [
-        "Environmental impact",
-        "Technical innovation",
-        "Industry adoption",
-      ],
+        "I got awarded by Honorable Chief Minister of Uttar Pradesh for my contribution and research in the plated bomb detection system. I was the youngest scientist to receive this award. It was a proud moment for me and my family. ",
+      contribution: [],
+    },
+    {
+      title: "Northern India Science Fair : 2016",
+      organization: {
+        name: "Government of India",
+        website: "",
+        logo: <Award className="w-12 h-12" />,
+      },
+      year: 2024,
+      image: "/kanishka-sahu-award-northern-india.png",
+      description:
+        "Northern India Science Fair is a prestigious event organized by the Government of India at National Science center New Delhi. I represented my state Uttar Pradesh and won the first prize for my project on the plated bomb detection system. ",
+      contribution: [],
     },
   ];
 
@@ -86,12 +80,12 @@ const Awards = () => {
           <div className="space-y-12 pt-10">
             {awards.map((award, index) => (
               <Card className="overflow-hidden group hover:shadow-lg transition-shadow">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div className="relative h-[250px] lg:h-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                  <div className="">
                     <img
                       src={award.image}
                       alt={award.title}
-                      className="w-full h-full object-cover"
+                      className="object-cover h-full w-full"
                     />
                     {/* <div className="absolute top-4 left-4 bg-indigo-600 text-white px-4 py-2 rounded-lg flex items-center">
                       <Calendar className="w-4 h-4 mr-2" />
@@ -107,15 +101,19 @@ const Awards = () => {
                         <h3 className="text-xl font-semibold">
                           {award.organization.name}
                         </h3>
-                        <a
-                          href={award.organization.website}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center my-4"
-                        >
-                          <Globe className="w-4 h-4 mr-1" />
-                          <span>Know More</span>
-                        </a>
+                        {award.organization.website ? (
+                          <a
+                            href={award.organization.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center my-4"
+                          >
+                            <Globe className="w-4 h-4 mr-1" />
+                            <span>Know More</span>
+                          </a>
+                        ) : (
+                          <div className="py-6"></div>
+                        )}
                       </div>
                     </div>
 
@@ -123,12 +121,12 @@ const Awards = () => {
                       {award.description}
                     </p>
 
-                    <div className="mb-6">
+                    {/* <div className="mb-6">
                       <h4 className="text-lg font-semibold  mb-3">
                         Contribution
                       </h4>
                       <ul className="space-y-2">
-                        {award.criteria.map((criterion, idx) => (
+                        {award.contribution.map((criterion, idx) => (
                           <li
                             key={idx}
                             className="flex items-center text-gray-400"
@@ -138,7 +136,7 @@ const Awards = () => {
                           </li>
                         ))}
                       </ul>
-                    </div>
+                    </div> */}
 
                     {/* <div className="bg-gray-50 rounded-lg p-4">
                       <h4 className="text-sm font-semibold text-gray-900 mb-2">
