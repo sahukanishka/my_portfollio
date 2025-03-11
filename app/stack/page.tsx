@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { PageHeader } from "@/components/page-header";
 import { StackGrid } from "@/components/stack/stack-grid";
 import {
@@ -13,6 +10,23 @@ import {
   Smartphone,
   TestTube,
 } from "lucide-react";
+import { Metadata } from "next";
+
+// Define metadata for the page
+export const metadata: Metadata = {
+  title: "Tech Stack | kanishka sahu - Developer & Engineer",
+  description:
+    "Explore the technologies, frameworks, and tools I've mastered throughout my career including React, TypeScript, AWS, and more.",
+  keywords:
+    "tech stack, developer skills, frontend, backend, cloud, AI, mobile development",
+  openGraph: {
+    title: "Tech Stack | kanishka sahu - Developer & Engineer",
+    description:
+      "Explore the technologies, frameworks, and tools I've mastered throughout my career.",
+    url: "https://kanishkasahu.com/stack",
+    type: "website",
+  },
+};
 
 const techStack = {
   languages: {
@@ -110,14 +124,9 @@ export default function Stack() {
           description="Some fancy tech I've worked with"
         />
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="mt-12"
-        >
+        <div className="mt-12">
           <StackGrid categories={techStack} />
-        </motion.div>
+        </div>
       </div>
     </div>
   );
