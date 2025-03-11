@@ -1,9 +1,39 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { PageHeader } from "@/components/page-header";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Metadata } from "next";
+import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Professional Journey | Kanishka Sahu",
+  description:
+    "Explore Kanishka Sahu's career timeline including leadership roles at Sixeye Technologies, Oyela Technologies, and entrepreneurial ventures.",
+  keywords:
+    "Kanishka Sahu, career timeline, professional journey, CTO, engineering leadership, startup founder",
+  openGraph: {
+    title: "Professional Journey and Career Timeline | Kanishka Sahu",
+    description:
+      "Follow my professional path from startup founder to engineering leadership roles, showcasing experience in AI, product development, and innovation.",
+    type: "website",
+    url: "https://kanishkasahu.com/timeline",
+    images: [
+      {
+        url: "/images/timeline-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kanishka Sahu's Professional Timeline",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Professional Journey | Kanishka Sahu",
+    description:
+      "My professional timeline highlighting roles as CTO, engineering leader, and startup founder.",
+    images: ["/images/timeline-og.jpg"],
+  },
+};
 
 const timelineEvents = [
   {
@@ -20,6 +50,7 @@ const timelineEvents = [
       "Founding Engineer",
     ],
     logo: "https://media.licdn.com/dms/image/v2/D560BAQGAr1cK2rSYiw/company-logo_100_100/company-logo_100_100/0/1738573362649/sixeye_in_logo?e=1747872000&v=beta&t=_SOq4QOClSpiyP6_DgjHdRI0axxQ8GasuvnYBwWleQ4",
+    alt: "Sixeye Technologies logo",
   },
   {
     year: "2021-2024",
@@ -35,6 +66,7 @@ const timelineEvents = [
       "Founding Engineer",
     ],
     logo: "https://media.licdn.com/dms/image/v2/D560BAQGt0wmd7OrjLg/company-logo_200_200/company-logo_200_200/0/1720263140887/oyela_in_logo?e=1747872000&v=beta&t=In_XRPW1znJlQJIJ-6bNe2sauKLwnlCZYRa6bHrO9Ck",
+    alt: "Oyela Technologies logo",
   },
 
   {
@@ -42,9 +74,10 @@ const timelineEvents = [
     title: "Founder & CTO",
     company: "Lys Labs Pvt ltd (Startup)",
     description:
-      "Founded a startup in my third year of college. At that time, Uber and Ola were growing rapidly in India, and I thought, why not build something on top of it? My co-founder friend ( Ujjwal ) and I came up with the idea of Glomo (Glowing + Moving) taxi-top LED boards mounted on car roofs. These boards were connected to the driver’s mobile via an app. The app was designed to take the driver’s live location and send it to a server, where we processed the data to display relevant ads to people outside the cab. The idea was simple - take a fee from advertisers and slit to 50-50 with a cab driver, extra income stream for drivers and more advertising opportunities for advertisers. I almost completed building the product and was working with early customers when the first wave of COVID-19 hit, leading to lockdowns. After waiting for a month, the second wave struck even harder, preventing us from launching. Ultimately, we made the difficult decision to shut down due to the unexpected lockdowns and ongoing COVID-19 disruptions.",
+      "Founded a startup in my third year of college. At that time, Uber and Ola were growing rapidly in India, and I thought, why not build something on top of it? My co-founder friend ( Ujjwal ) and I came up with the idea of Glomo (Glowing + Moving) taxi-top LED boards mounted on car roofs. These boards were connected to the driver's mobile via an app. The app was designed to take the driver's live location and send it to a server, where we processed the data to display relevant ads to people outside the cab. The idea was simple - take a fee from advertisers and slit to 50-50 with a cab driver, extra income stream for drivers and more advertising opportunities for advertisers. I almost completed building the product and was working with early customers when the first wave of COVID-19 hit, leading to lockdowns. After waiting for a month, the second wave struck even harder, preventing us from launching. Ultimately, we made the difficult decision to shut down due to the unexpected lockdowns and ongoing COVID-19 disruptions.",
     badges: ["Startup", "AI", "Analytics", "IOT", "Engineering"],
     logo: "https://media.licdn.com/dms/image/v2/C510BAQFaKskwf3ySwA/company-logo_100_100/company-logo_100_100/0/1630617550251/lys_labs_pvt_ltd_logo?e=1747872000&v=beta&t=TmT7_lrIzvx-P-_HPXfZbnv4ErjWtNobkikey49QhJA",
+    alt: "Lys Labs logo",
   },
   {
     year: "2019-2020",
@@ -60,6 +93,7 @@ const timelineEvents = [
       "Entrepreneurship",
     ],
     logo: "https://media.licdn.com/dms/image/v2/C560BAQFgbmzWBLrkHg/company-logo_200_200/company-logo_200_200/0/1630665220862?e=1747872000&v=beta&t=TV2iJ1EeNSaGR68edT67Z1BDsccLZxxzFvuJ0XWK4KU",
+    alt: "Entrepreneurship and Skill Development Cell logo",
   },
   {
     year: "2018-2019",
@@ -75,6 +109,7 @@ const timelineEvents = [
       "Entrepreneurship",
     ],
     logo: "https://media.licdn.com/dms/image/v2/C560BAQFgbmzWBLrkHg/company-logo_200_200/company-logo_200_200/0/1630665220862?e=1747872000&v=beta&t=TV2iJ1EeNSaGR68edT67Z1BDsccLZxxzFvuJ0XWK4KU",
+    alt: "Entrepreneurship and Skill Development Cell logo",
   },
 ];
 
@@ -86,22 +121,21 @@ export default function Timeline() {
           title="My Journey"
           description="My epic saga of tech wizardry, where I tamed wild code, built cool stuff, and hit major geek milestones"
         />
-
         <div className="mt-16 space-y-8">
           {timelineEvents.map((event, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-            >
+            <div key={index}>
               <Card className="p-6">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                   <div className="flex gap-6">
                     <div className="hidden md:block">
                       <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center">
-                        {/* Replace with your actual company logo */}
-                        <img src={event.logo} />
+                        <Image
+                          width={100}
+                          height={100}
+                          src={event.logo}
+                          alt={event.alt}
+                          priority
+                        />
                       </div>
                     </div>
                     <div>
@@ -128,7 +162,7 @@ export default function Timeline() {
                   </div>
                 </div>
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
