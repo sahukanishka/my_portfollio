@@ -15,13 +15,13 @@ export const navigation = {
   main: [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
+    { name: "Awards", path: "/awards" },
     { name: "Timeline", path: "/timeline" },
     // { name: "Media", path: "/media" },
     { name: "Stack", path: "/stack" },
     // { name: "Projects", path: "/projects" },
     { name: "Blog", path: "/blogs" },
     { name: "Contact", path: "/contact" },
-    { name: "Awards", path: "/awards" },
   ],
   social: [
     {
