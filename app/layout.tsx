@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import Head from "next/head";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,9 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      <Head>
         <link rel="canonical" href="https://kanishkasahu.com" />
-      </head>
+        <GoogleAnalytics gaId="G-2ZHSG5SRYS" />
+      </Head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
