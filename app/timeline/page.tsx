@@ -8,9 +8,9 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Professional Journey | Kanishka Sahu",
   description:
-    "Explore Kanishka Sahu's career timeline including leadership roles at Sixeye Technologies, Oyela Technologies, and entrepreneurial ventures.",
+    "Explore Kanishka Sahu's career timeline including leadership roles at Neurix AI, Sixeye Technologies, Oyela Technologies, and entrepreneurial ventures.",
   keywords:
-    "Kanishka Sahu, career timeline, professional journey, CTO, engineering leadership, startup founder",
+    "Kanishka Sahu, career timeline, professional journey, CTO, engineering leadership, startup founder, Neurix AI, neurixhq.com",
   openGraph: {
     title: "Professional Journey and Career Timeline | Kanishka Sahu",
     description:
@@ -37,6 +37,24 @@ export const metadata: Metadata = {
 
 const timelineEvents = [
   {
+    year: "Mar 2025 - Present",
+    title: "CTO & Cofounder",
+    company: "Neurix AI",
+    description:
+      "Neurix AI is a full-stack generative AI company building custom agents, copilots, and internal automation systems. From infra to workflows to deployment, we help you unlock AIʼs real value.",
+    badges: [
+      "AI",
+      "Leadership",
+      "Cofounder",
+      "Automation",
+      "Product Development",
+      "Generative AI",
+    ],
+    logo: "/neurix_ai_logo.png",
+    alt: "Neurix AI logo",
+    website: "https://www.neurixhq.com",
+  },
+  {
     year: "2024-2025",
     title: "Founder & CTO",
     company: "Sixeye Technologies",
@@ -51,6 +69,7 @@ const timelineEvents = [
     ],
     logo: "https://media.licdn.com/dms/image/v2/D560BAQGAr1cK2rSYiw/company-logo_100_100/company-logo_100_100/0/1738573362649/sixeye_in_logo?e=1747872000&v=beta&t=_SOq4QOClSpiyP6_DgjHdRI0axxQ8GasuvnYBwWleQ4",
     alt: "Sixeye Technologies logo",
+    website: "https://www.sixeye.in",
   },
   {
     year: "2021-2024",
@@ -67,6 +86,7 @@ const timelineEvents = [
     ],
     logo: "https://media.licdn.com/dms/image/v2/D560BAQGt0wmd7OrjLg/company-logo_200_200/company-logo_200_200/0/1720263140887/oyela_in_logo?e=1747872000&v=beta&t=In_XRPW1znJlQJIJ-6bNe2sauKLwnlCZYRa6bHrO9Ck",
     alt: "Oyela Technologies logo",
+    website: "https://www.oyela.in",
   },
 
   {
@@ -78,6 +98,7 @@ const timelineEvents = [
     badges: ["Startup", "AI", "Analytics", "IOT", "Engineering"],
     logo: "https://media.licdn.com/dms/image/v2/C510BAQFaKskwf3ySwA/company-logo_100_100/company-logo_100_100/0/1630617550251/lys_labs_pvt_ltd_logo?e=1747872000&v=beta&t=TmT7_lrIzvx-P-_HPXfZbnv4ErjWtNobkikey49QhJA",
     alt: "Lys Labs logo",
+    website: "https://www.lys-labs.com",
   },
   {
     year: "2019-2020",
@@ -128,7 +149,12 @@ export default function Timeline() {
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                   <div className="flex gap-6">
                     <div className="hidden md:block">
-                      <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center">
+                      <a
+                        href={event.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-16 h-16 rounded-full bg-muted flex items-center justify-center"
+                      >
                         <Image
                           width={100}
                           height={100}
@@ -136,7 +162,7 @@ export default function Timeline() {
                           alt={event.alt}
                           priority
                         />
-                      </div>
+                      </a>
                     </div>
                     <div>
                       <div className="text-sm text-primary font-medium mb-2">
