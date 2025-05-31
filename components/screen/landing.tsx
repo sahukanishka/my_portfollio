@@ -57,7 +57,7 @@ export const HeroCardData = [
     title: "Coding Coding & Coding",
     description:
       "Coding isn’t just my skill it’s my breathing. I love building, debugging, and solving complex problems with code. From AI-powered chatbots to scalable platforms, apps, websites. I enjoy creating products that makes life easier and me happy. Writing code feels like crafting magic, turning ideas into reality. Whether it’s a startup project or an automation tool, I dive deep into logic and innovation. Tech excites me, and coding keeps me unstoppable!",
-    image: "/kanishka-working.jpg",
+    image: "/kanishka_sahu_tech.png",
     link: "",
     reverse: true,
   },
