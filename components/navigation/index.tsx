@@ -1,25 +1,20 @@
 import {
-  FileStack,
   Github,
   Instagram,
-  InstagramIcon,
   Layers,
   Linkedin,
   Rss,
-  SunMedium,
   Twitter,
   Youtube,
 } from "lucide-react";
 
 export const navigation = {
   main: [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Awards", path: "/awards" },
-    { name: "Timeline", path: "/timeline" },
-    // { name: "Media", path: "/media" },
-    { name: "Stack", path: "/stack" },
-    // { name: "Projects", path: "/projects" },
+    { name: "About", path: "/#about" },
+    { name: "Experience", path: "/#experience" },
+    { name: "Stack", path: "/#stack" },
+    { name: "Awards", path: "/#awards" },
+    { name: "Gallery", path: "/#gallery" },
     { name: "Blog", path: "/blogs" },
     { name: "Contact", path: "/contact" },
   ],
@@ -42,7 +37,7 @@ export const navigation = {
     {
       name: "Instagram",
       path: "https://instagram.com/kanixsahu",
-      icon: InstagramIcon,
+      icon: Instagram,
     },
     {
       name: "Stack Overflow",

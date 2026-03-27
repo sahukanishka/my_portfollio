@@ -1,11 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { PageHeader } from "@/components/page-header";
 import { BlogCard } from "@/components/blog-card";
 import { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getMediumPosts } from "@/lib/medium";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 export default function Blogs() {
   const [posts, setPosts] = useState<any[]>([]);
@@ -22,47 +22,46 @@ export default function Blogs() {
         setLoading(false);
       }
     };
-
     fetchPosts();
   }, []);
 
-  console.log("-->", posts);
   return (
-    <div className="min-h-screen pt-24 pb-16">
-      <div className="container mx-auto px-6">
-        <PageHeader title="Blog" description="Sometimes I write" />
+    <div className="max-w-4xl mx-auto px-6 pt-32 pb-16">
+      <Link
+        href="/"
+        className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
+      >
+        <ArrowLeft className="h-3 w-3" />
+        Back
+      </Link>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          {loading
-            ? // Loading skeletons
-              Array.from({ length: 6 }).map((_, index) => (
-                <div key={index} className="space-y-4">
-                  <Skeleton className="h-48 w-full" />
-                  <Skeleton className="h-4 w-3/4" />
-                  <Skeleton className="h-4 w-full" />
-                  <Skeleton className="h-4 w-2/3" />
-                </div>
-              ))
-            : // Actual blog posts
-              posts.map((post, index) => (
-                <motion.div
-                  key={post.guid}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <BlogCard
-                    title={post.title}
-                    description={post.description}
-                    date={post.pubDate}
-                    link={post.link}
-                    image={post.thumbnail}
-                    author={post.author}
-                    categories={post.categories}
-                  />
-                </motion.div>
-              ))}
-        </div>
+      <h1 className="text-3xl font-semibold tracking-tight mb-2">Writing</h1>
+      <p className="text-muted-foreground mb-12">
+        Thoughts on engineering, AI, and building products.
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {loading
+          ? Array.from({ length: 4 }).map((_, index) => (
+              <div key={index} className="space-y-4">
+                <Skeleton className="h-48 w-full rounded-lg" />
+                <Skeleton className="h-4 w-3/4" />
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-2/3" />
+              </div>
+            ))
+          : posts.map((post) => (
+              <BlogCard
+                key={post.guid}
+                title={post.title}
+                description={post.description}
+                date={post.pubDate}
+                link={post.link}
+                image={post.thumbnail}
+                author={post.author}
+                categories={post.categories}
+              />
+            ))}
       </div>
     </div>
   );

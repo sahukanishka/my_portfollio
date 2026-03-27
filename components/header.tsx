@@ -3,11 +3,9 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { MenuIcon, XIcon } from "lucide-react";
 import { ThemeToggle } from "@/components/themeToggle";
-import Logo from "@/icons/Logo";
 import { navigation } from "./navigation/index";
 
 export default function Header() {
@@ -15,7 +13,6 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  // Handle scroll event
   const handleScroll = useCallback(() => {
     setIsScrolled(window.scrollY > 20);
   }, []);
@@ -26,34 +23,34 @@ export default function Header() {
   }, [handleScroll]);
 
   return (
-    <motion.header
+    <header
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background/80 backdrop-blur-md shadow-md"
+          ? "bg-background/80 backdrop-blur-md border-b border-border"
           : "bg-transparent"
       )}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
     >
-      <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" passHref aria-label="Go to homepage">
-          <Logo />
+      <nav className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+        <Link
+          href="/"
+          className="font-mono text-sm font-medium tracking-tight hover:opacity-70 transition-opacity"
+          aria-label="Go to homepage"
+        >
+          kanishka.
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center gap-6">
           {navigation.main.map((route) => (
             <Link
               key={route.path}
               href={route.path}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
+                "text-[13px] tracking-wide transition-colors link-underline",
                 pathname === route.path
-                  ? "text-primary font-semibold"
-                  : "text-muted-foreground"
+                  ? "text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
               )}
             >
               {route.name}
@@ -63,7 +60,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden flex items-center space-x-4">
+        <div className="md:hidden flex items-center gap-3">
           <ThemeToggle />
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -72,9 +69,9 @@ export default function Header() {
             className="focus:outline-none"
           >
             {isOpen ? (
-              <XIcon className="h-6 w-6" />
+              <XIcon className="h-5 w-5" />
             ) : (
-              <MenuIcon className="h-6 w-6" />
+              <MenuIcon className="h-5 w-5" />
             )}
           </button>
         </div>
@@ -82,22 +79,17 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <motion.div
-          className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-md"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-        >
-          <div className="flex flex-col space-y-4 p-6">
+        <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-md border-b border-border">
+          <div className="flex flex-col gap-1 p-6">
             {navigation.main.map((route) => (
               <Link
                 key={route.path}
                 href={route.path}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
+                  "text-sm py-2 transition-colors",
                   pathname === route.path
-                    ? "text-primary font-semibold"
-                    : "text-muted-foreground"
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 )}
                 onClick={() => setIsOpen(false)}
               >
@@ -105,8 +97,8 @@ export default function Header() {
               </Link>
             ))}
           </div>
-        </motion.div>
+        </div>
       )}
-    </motion.header>
+    </header>
   );
 }

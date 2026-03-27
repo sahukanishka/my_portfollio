@@ -1,9 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Calendar, ExternalLink } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { format } from "date-fns";
@@ -28,42 +26,38 @@ export function BlogCard({
   categories,
 }: BlogCardProps) {
   return (
-    <Link href={link} target="_blank" rel="noopener noreferrer">
-      <Card className="overflow-hidden group hover:shadow-lg transition-shadow">
-        <div className="relative h-48">
+    <Link href={link} target="_blank" rel="noopener noreferrer" className="group">
+      <div className="border border-border rounded-lg overflow-hidden hover:border-foreground/20 transition-colors">
+        <div className="relative h-44">
           <Image
             src={image}
             alt={title}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            className="object-cover"
           />
         </div>
-        <div className="p-6">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-            <Calendar className="h-4 w-4" />
-            <time dateTime={date}>
-              {format(new Date(date), "MMMM d, yyyy")}
-            </time>
-          </div>
-          <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2">
+        <div className="p-5">
+          <p className="font-mono text-xs text-muted-foreground mb-2">
+            {format(new Date(date), "MMM d, yyyy")}
+          </p>
+          <h3 className="font-medium mb-2 line-clamp-2 group-hover:text-foreground/80 transition-colors">
             {title}
           </h3>
-          <p className="text-muted-foreground mb-4 line-clamp-3">
+          <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
             {description}
           </p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            {categories.map((category) => (
-              <Badge key={category} variant="secondary">
+          <div className="flex flex-wrap gap-1.5">
+            {categories.slice(0, 3).map((category) => (
+              <span
+                key={category}
+                className="font-mono text-[11px] px-2 py-0.5 rounded-full bg-secondary text-muted-foreground"
+              >
                 {category}
-              </Badge>
+              </span>
             ))}
           </div>
-          <div className="flex items-center justify-between">
-            <span className="text-sm text-muted-foreground">{author}</span>
-            <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
-          </div>
         </div>
-      </Card>
+      </div>
     </Link>
   );
 }

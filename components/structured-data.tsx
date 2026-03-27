@@ -2,20 +2,25 @@ export function generatePersonSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "John Doe",
-    url: "https://yourdomain.com",
+    name: "Kanishka Sahu",
+    url: "https://kanishkasahu.com",
     sameAs: [
-      "https://github.com/johndoe",
-      "https://linkedin.com/in/johndoe",
-      "https://twitter.com/johndoe",
+      "https://github.com/sahukanishka",
+      "https://www.linkedin.com/in/sahukanishka/",
+      "https://x.com/KanishkaSahu",
     ],
-    jobTitle: "Tech Innovator & AI Expert",
+    jobTitle: "Applied AI Engineer",
     worksFor: {
       "@type": "Organization",
-      name: "Tech Innovators Inc.",
+      name: "Mercor",
+      url: "https://www.mercor.com",
     },
     description:
-      "Tech entrepreneur and AI specialist with expertise in machine learning and innovative solutions.",
+      "Applied AI Engineer at Mercor working on RL, evals, agents, and post-training. Previously CTO & Cofounder at Neurix AI.",
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: "Punjabi University",
+    },
   };
 }
 
@@ -30,7 +35,7 @@ export function generateProjectSchema(project: any) {
     url: project.liveUrl,
     author: {
       "@type": "Person",
-      name: "John Doe",
+      name: "Kanishka Sahu",
     },
   };
 }
