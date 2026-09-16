@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
+import { contactSchema, type ContactValues } from "@/lib/contact-schema";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -18,31 +18,22 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 
-const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
-  phone: z.string().regex(/^\+?[1-9]\d{1,14}$/, "Invalid phone number"),
-  subject: z.string().min(5, "Subject must be at least 5 characters"),
-  message: z.string(),
-});
-
-type FormValues = z.infer<typeof formSchema>;
-
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<ContactValues>({
+    resolver: zodResolver(contactSchema),
     defaultValues: {
       name: "",
       email: "",
       phone: "",
       subject: "",
       message: "",
+      website: "",
     },
   });
 
-  async function onSubmit(data: FormValues) {
+  async function onSubmit(data: ContactValues) {
     setIsSubmitting(true);
     try {
       const response = await fetch("/api/contact", {
@@ -51,12 +42,20 @@ export function ContactForm() {
         body: JSON.stringify(data),
       });
 
-      if (!response.ok) throw new Error("Failed to submit form");
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.error ?? "Failed to send message.");
+      }
 
       toast.success("Message sent successfully!");
       form.reset();
     } catch (error) {
-      toast.error("Failed to send message. Please try again.");
+      toast.error(
+        error instanceof Error
+          ? error.message
+          : "Failed to send message. Please try again."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -135,6 +134,23 @@ export function ContactForm() {
                 />
               </FormControl>
               <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="website"
+          render={({ field }) => (
+            <FormItem className="hidden" aria-hidden="true">
+              <FormControl>
+                <Input
+                  tabIndex={-1}
+                  autoComplete="off"
+                  placeholder="Leave this field empty"
+                  {...field}
+                />
+              </FormControl>
             </FormItem>
           )}
         />
