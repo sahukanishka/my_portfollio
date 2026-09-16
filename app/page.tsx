@@ -16,14 +16,14 @@ const experiences = [
     tags: ["RL", "Evals", "Agents", "Post-Training", "Fine-Tuning", "Synthetic Data"],
   },
   {
-    period: "Feb 2025 — Jul 2025",
+    period: "Mar 2025 — Present",
     role: "CTO & Cofounder",
     company: "Neurix AI",
     url: "https://www.neurixhq.com",
-    logo: "/logos/neurix.png",
+    logo: "/neurix_ai_logo.png",
     description:
-      "Built a full-stack generative AI company delivering custom agents, copilots, and internal automation systems for startups and businesses. Led engineering from infrastructure to deployment.",
-    tags: ["Generative AI", "Agents", "Automation", "Leadership"],
+      "Neurix AI is a full-stack generative AI company building custom agents, copilots, and internal automation systems. From infra to workflows to deployment, we help you unlock AI's real value.",
+    tags: ["Generative AI", "Agents", "Copilots", "Automation", "Leadership"],
   },
   {
     period: "Aug 2024 — Jan 2025",
@@ -42,7 +42,7 @@ const experiences = [
     url: "https://www.oyela.in",
     logo: "/logos/oyela.png",
     description:
-      "Promoted to Chief Engineering Officer to lead Oyela's scaling phase. Scaled the platform from 100k to 500k+ MAU and grew API volume from 10k to 250k+ daily calls. Expanded the engineering team from 2 engineers to 12+, owning hiring, architecture decisions, and technical execution across all products.",
+      "Stepped into the Chief Engineering Officer role to lead Oyela's scaling phase. Scaled the platform from 100k to 500k+ MAU and grew API volume from 10k to 250k+ daily calls. Expanded the engineering team from 2 engineers to 12+, owning hiring, architecture decisions, and technical execution across all products.",
     tags: ["Scaling", "Leadership", "Architecture", "Team Growth"],
   },
   {
@@ -52,8 +52,8 @@ const experiences = [
     url: "https://www.oyela.in",
     logo: "/logos/oyela.png",
     description:
-      "Joined as the first engineer and built the entire tech stack from scratch — the Oyela buyer-side commerce platform, Frontway seller app, internal admin panel, and FastBuy quick checkout. Owned everything from product UX to backend infrastructure. Set up CI/CD pipelines with GitHub Actions and Docker, integrated payment gateways (Juspay, Razorpay), optimized page load from 12s to under 3s, and built the foundation that the platform scaled on.",
-    tags: ["Founding Engineer", "0-to-1", "Full Stack", "Product", "AWS"],
+      "Started Oyela with three friends and owned the entire technology side as a founding member. Built the full tech stack from scratch — the Oyela buyer-side commerce platform, Frontway seller app, internal admin panel, and FastBuy quick checkout — and shaped product direction alongside the other founders. Set up CI/CD pipelines with GitHub Actions and Docker, integrated payment gateways (Juspay, Razorpay), optimized page load from 12s to under 3s, and built the foundation that the platform scaled on.",
+    tags: ["Founding Member", "0-to-1", "Full Stack", "Product", "AWS"],
   },
   {
     period: "Nov 2019 — Apr 2021",
@@ -165,10 +165,19 @@ export default function Home() {
               >
                 Mercor
               </Link>
+              {" "}· CTO & Cofounder at{" "}
+              <Link
+                href="https://www.neurixhq.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground link-underline"
+              >
+                Neurix AI
+              </Link>
             </p>
             <p className="text-muted-foreground leading-relaxed max-w-xl">
               I work on reinforcement learning, model evaluations, AI agents,
-              post-training, fine-tuning, and synthetic data generation. Previously
+              post-training, fine-tuning, and synthetic data generation. I am also
               CTO & Cofounder at Neurix AI. CSE graduate from Punjabi University
               with experience scaling products from zero to 500k+ users.
             </p>
@@ -219,9 +228,10 @@ export default function Home() {
             </p>
             <p>
               Currently I work on RL environments, post-training pipelines,
-              evals, and synthetic data generation at Mercor. Before that, I
-              co-founded Neurix AI, scaled Oyela from 0 to 500k+ MAU, and was
-              recognized as the Youngest Child Scientist.
+              evals, and synthetic data generation at Mercor. I am also CTO &
+              Cofounder of Neurix AI. I started Oyela with three friends and
+              scaled it from 0 to 500k+ MAU, and was recognized as the Youngest
+              Child Scientist.
             </p>
           </div>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
