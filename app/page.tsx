@@ -206,7 +206,7 @@ export default function Home() {
               alt="Kanishka Sahu"
               width={140}
               height={140}
-              className="rounded-full grayscale hover:grayscale-0 transition-all duration-500 object-cover object-center w-[120px] h-[120px] md:w-[140px] md:h-[140px]"
+              className="rounded-full grayscale-0 hover:grayscale transition-all duration-500 object-cover object-center w-[120px] h-[120px] md:w-[140px] md:h-[140px]"
               priority
             />
           </div>
