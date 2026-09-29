@@ -202,11 +202,11 @@ export default function Home() {
 
           <div className="shrink-0">
             <Image
-              src="/kanixdp.jpg"
+              src="/kanishka_sahu.png"
               alt="Kanishka Sahu"
               width={140}
               height={140}
-              className="rounded-full grayscale hover:grayscale-0 transition-all duration-500 object-cover w-[120px] h-[120px] md:w-[140px] md:h-[140px]"
+              className="rounded-full grayscale hover:grayscale-0 transition-all duration-500 object-cover object-center w-[120px] h-[120px] md:w-[140px] md:h-[140px]"
               priority
             />
           </div>
