@@ -7,16 +7,23 @@ import { ArrowUpRight } from "lucide-react";
 const experiences = [
   {
     period: "Jul 2025 — Present",
-    role: "Applied AI Engineer (MTS)",
+    role: "Applied AI Engineer (Member of Technical Staff)",
     company: "Mercor",
     url: "https://www.mercor.com",
     logo: "/logos/mercor.png",
     description:
-      "Working on reinforcement learning environments, model evaluations, AI agents, post-training pipelines, fine-tuning, and synthetic data generation for frontier AI systems.",
-    tags: ["RL", "Evals", "Agents", "Post-Training", "Fine-Tuning", "Synthetic Data"],
+      "Scaled Mercor's coding evaluation platform and owned coding data pipelines and RL infrastructure for AI labs.",
+    highlights: [
+      "Automated coding task generation from open-source PRs and quality checks for thousands of tasks across multiple labs.",
+      "Developed RL environments, agent runtimes, and verifiers for APEX-Agents and APEX-SWE, and ran benchmark and client-model evaluations. Implemented ACE and task-specific coding evaluation harnesses, analyzing failures across GPT, Gemini, and Claude.",
+      "Enabled thousands of concurrent evaluations through distributed infrastructure, automated grading, loss analysis, and ablation studies, cutting delivery time from 10–12 to 2–3 hours.",
+      "Owned Studio's agent harness and verifiers, integrating open-source apps and sandboxed runtimes for Claude Code, Cursor, and OpenCode.",
+      "Created FraudGraphs and a human-calibrated agentic review pipeline for trust and safety triage. Centralized location intelligence across millions of data points for 300K+ experts. Reduced compute costs by approximately 75% through autoscaling, document parsing, and caching services.",
+    ],
+    tags: ["Coding Data", "RL Environments", "Agent Harnesses", "Evals", "Trust & Safety"],
   },
   {
-    period: "Mar 2025 — Present",
+    period: "Feb 2025 — Jul 2025",
     role: "CTO & Cofounder",
     company: "Neurix AI",
     url: "https://www.neurixhq.com",
@@ -165,7 +172,7 @@ export default function Home() {
               >
                 Mercor
               </Link>
-              {" "}· CTO & Cofounder at{" "}
+              {" "}· Former CTO & Cofounder at{" "}
               <Link
                 href="https://www.neurixhq.com"
                 target="_blank"
@@ -176,10 +183,10 @@ export default function Home() {
               </Link>
             </p>
             <p className="text-muted-foreground leading-relaxed max-w-xl">
-              I work on reinforcement learning, model evaluations, AI agents,
-              post-training, fine-tuning, and synthetic data generation. I am also
-              CTO & Cofounder at Neurix AI. CSE graduate from Punjabi University
-              with experience scaling products from zero to 500k+ users.
+              I build coding data pipelines, RL environments, agent harnesses,
+              and evaluation systems at Mercor. Previously, I co-founded Neurix
+              AI and Sixeye. CSE graduate from Punjabi University with experience
+              scaling products from zero to 500k+ users.
             </p>
 
             <div className="flex gap-4 mt-6">
@@ -227,9 +234,9 @@ export default function Home() {
               in 2021 and have been shipping products ever since.
             </p>
             <p>
-              Currently I work on RL environments, post-training pipelines,
-              evals, and synthetic data generation at Mercor. I am also CTO &
-              Cofounder of Neurix AI. I started Oyela with three friends and
+              Currently I work on coding data pipelines, RL environments, agent
+              harnesses, and evaluation systems at Mercor. I previously co-founded
+              Neurix AI. I started Oyela with three friends and
               scaled it from 0 to 500k+ MAU, and was recognized as the Youngest
               Child Scientist.
             </p>
@@ -298,6 +305,13 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground leading-relaxed mt-2">
                   {exp.description}
                 </p>
+                {"highlights" in exp && exp.highlights && (
+                  <ul className="text-sm text-muted-foreground leading-relaxed mt-3 space-y-2 list-disc pl-5">
+                    {exp.highlights.map((highlight) => (
+                      <li key={highlight}>{highlight}</li>
+                    ))}
+                  </ul>
+                )}
                 <div className="flex flex-wrap gap-2 mt-3">
                   {exp.tags.map((tag) => (
                     <span

@@ -13,16 +13,16 @@ export const metadata: Metadata = {
     template: "%s | Kanishka Sahu",
   },
   description:
-    "Applied AI Engineer at Mercor and CTO & Cofounder of Neurix AI (www.neurixhq.com). Working on RL environments, model evals, AI agents, post-training, fine-tuning, and generative AI systems.",
+    "Applied AI Engineer at Mercor, building coding data pipelines, RL environments, agent harnesses, and evaluation systems for AI labs. Former CTO & Cofounder of Neurix AI.",
   keywords: [
     "Kanishka Sahu",
     "Applied AI Engineer",
     "Reinforcement Learning",
-    "Post-Training",
+    "Coding Data Pipelines",
     "Evals",
-    "AI Agents",
-    "Fine-Tuning",
-    "Synthetic Data",
+    "Agent Harnesses",
+    "Distributed Evaluation",
+    "Verifiers",
     "Mercor",
     "Neurix AI",
     "Neurix",
@@ -39,14 +39,14 @@ export const metadata: Metadata = {
     url: "https://kanishkasahu.com",
     title: "Kanishka Sahu — Applied AI Engineer",
     description:
-      "Applied AI Engineer at Mercor and CTO & Cofounder of Neurix AI (www.neurixhq.com). RL, evals, agents, and generative AI.",
+      "Applied AI Engineer at Mercor, building coding data pipelines, RL environments, agent harnesses, and evaluation systems. Former CTO & Cofounder of Neurix AI.",
     siteName: "Kanishka Sahu",
   },
   twitter: {
     card: "summary_large_image",
     title: "Kanishka Sahu — Applied AI Engineer",
     description:
-      "Applied AI Engineer at Mercor and CTO & Cofounder of Neurix AI (www.neurixhq.com).",
+      "Applied AI Engineer at Mercor. Former CTO & Cofounder of Neurix AI.",
     creator: "@kanishkasahu",
   },
   robots: {

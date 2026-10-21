@@ -10,22 +10,16 @@ export function generatePersonSchema() {
       "https://x.com/KanishkaSahu",
       "https://www.neurixhq.com",
     ],
-    jobTitle: ["Applied AI Engineer", "CTO & Cofounder"],
+    jobTitle: "Applied AI Engineer",
     worksFor: [
       {
         "@type": "Organization",
         name: "Mercor",
         url: "https://www.mercor.com",
       },
-      {
-        "@type": "Organization",
-        name: "Neurix AI",
-        url: "https://www.neurixhq.com",
-        sameAs: "https://www.neurixhq.com",
-      },
     ],
     description:
-      "Applied AI Engineer at Mercor and CTO & Cofounder of Neurix AI (neurixhq.com). Working on RL, evals, agents, post-training, and full-stack generative AI systems.",
+      "Applied AI Engineer at Mercor, building coding data pipelines, RL environments, agent harnesses, and evaluation systems for AI labs. Former CTO & Cofounder of Neurix AI.",
     alumniOf: {
       "@type": "EducationalOrganization",
       name: "Punjabi University",
