@@ -209,7 +209,7 @@ export default function Home() {
 
           <div className="shrink-0">
             <Image
-              src="/kanishka_sahu.png"
+              src="/kanishka-sahu-front-profile.png"
               alt="Kanishka Sahu"
               width={140}
               height={140}
