@@ -184,9 +184,10 @@ export default function Home() {
             </p>
             <p className="text-muted-foreground leading-relaxed max-w-xl">
               I build coding data pipelines, RL environments, agent harnesses,
-              and evaluation systems at Mercor. Previously, I co-founded Neurix
-              AI and Sixeye. CSE graduate from Punjabi University with experience
-              scaling products from zero to 500k+ users.
+              and evaluation systems at Mercor and also co-authored the APEX-v1
+              benchmark paper. Previously, I co-founded Neurix AI and Sixeye.
+              CSE graduate from Punjabi University with experience scaling
+              products from zero to 500k+ users.
             </p>
 
             <div className="flex gap-4 mt-6">
