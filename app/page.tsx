@@ -2,7 +2,7 @@ import { generatePersonSchema } from "@/components/structured-data";
 import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 
 const experiences = [
   {
@@ -12,7 +12,7 @@ const experiences = [
     url: "https://www.mercor.com",
     logo: "/logos/mercor.png",
     description:
-      "Scaled Mercor's coding evaluation platform and owned coding data pipelines and RL infrastructure for AI labs.",
+      "I build coding data pipelines, RL environments, and evaluation systems for AI labs at Mercor. My work has helped scale concurrent evaluations and cut delivery time from 10–12 hours to 2–3 hours.",
     highlights: [
       "Automated coding task generation from open-source PRs and quality checks for thousands of tasks across multiple labs.",
       "Developed RL environments, agent runtimes, and verifiers for APEX-Agents and APEX-SWE, and ran benchmark and client-model evaluations. Implemented ACE and task-specific coding evaluation harnesses, analyzing failures across GPT, Gemini, and Claude.",
@@ -306,11 +306,18 @@ export default function Home() {
                   {exp.description}
                 </p>
                 {"highlights" in exp && exp.highlights && (
-                  <ul className="text-sm text-muted-foreground leading-relaxed mt-3 space-y-2 list-disc pl-5">
-                    {exp.highlights.map((highlight) => (
-                      <li key={highlight}>{highlight}</li>
-                    ))}
-                  </ul>
+                  <details className="group/details mt-3">
+                    <summary className="inline-flex cursor-pointer items-center gap-1.5 text-sm font-medium text-foreground hover:opacity-70 transition-opacity list-none [&::-webkit-details-marker]:hidden">
+                      <span className="group-open/details:hidden">View details</span>
+                      <span className="hidden group-open/details:inline">Hide details</span>
+                      <ChevronDown className="h-4 w-4 transition-transform group-open/details:rotate-180" aria-hidden="true" />
+                    </summary>
+                    <ul className="text-sm text-muted-foreground leading-relaxed mt-3 space-y-2 list-disc pl-5">
+                      {exp.highlights.map((highlight) => (
+                        <li key={highlight}>{highlight}</li>
+                      ))}
+                    </ul>
+                  </details>
                 )}
                 <div className="flex flex-wrap gap-2 mt-3">
                   {exp.tags.map((tag) => (
