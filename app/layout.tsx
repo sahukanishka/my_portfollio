@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/sonner";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { COMING_SOON } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kanishkasahu.com"),
@@ -80,10 +81,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <main className="min-h-screen bg-background">{children}</main>
-          <Toaster />
-          <Footer />
+          {COMING_SOON ? (
+            <main className="min-h-screen bg-background">{children}</main>
+          ) : (
+            <>
+              <Header />
+              <main className="min-h-screen bg-background">{children}</main>
+              <Toaster />
+              <Footer />
+            </>
+          )}
         </ThemeProvider>
       </body>
     </html>
